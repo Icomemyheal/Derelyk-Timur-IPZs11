@@ -1,0 +1,27 @@
+@import './components/header';
+
+*,*::after,*::before{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
+html,
+body{
+    height:100%;
+    overflow-x: hidden;
+}
+h1,h2,h3,h4,h5,h6{
+    margin:0;
+    padding:0;
+}
+body.fixing, html.fixing{
+    width:100vw;
+    height:100vw;
+    overflow:hidden;
+}
+.container{
+    position:relative;
+    width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+}
