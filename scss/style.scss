@@ -1,5 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@500;700&family=Roboto:wght@300;400;500;700;900&display=swap');
+@import './utils/variables';
+@import './utils/normalize';
+@import './utils/mixins';
 @import './components/header';
-
 *,*::after,*::before{
     padding:0;
     margin:0;
@@ -16,7 +19,7 @@ h1,h2,h3,h4,h5,h6{
 }
 body.fixing, html.fixing{
     width:100vw;
-    height:100vw;
+    // height:100vw;
     overflow:hidden;
 }
 .container{
