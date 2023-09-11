@@ -404,7 +404,7 @@ template {
   background: #fff;
 }
 
-.header__inner {
+.header__inner--line {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -437,7 +437,7 @@ template {
   position: absolute;
   right: 0;
   bottom: 5px;
-  z-index: 999;
+  z-index: 1001;
   height: 2px;
   width: 20px;
   border-radius: 1px;
@@ -516,6 +516,7 @@ template {
   position: absolute;
   top: 0;
   left: 0;
+  z-index: 1000;
   background: #fff;
   -webkit-transform: translateX(-510px);
           transform: translateX(-510px);
@@ -684,6 +685,184 @@ template {
   font-family: 'Roboto', sans-serif;
   font-weight: 500;
   font-size: 16px;
+}
+
+.header__inner--title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+}
+
+.header__title--img {
+  position: absolute;
+  top: 0;
+  width: 320px;
+  height: 400px;
+}
+
+.header__img--overlay {
+  position: absolute;
+  top: 0;
+  width: 320px;
+  height: 400px;
+  z-index: 2;
+  background: rgba(39, 39, 39, 0.55);
+}
+
+.header__title--content {
+  position: relative;
+  z-index: 998;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 118px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header__h1--title {
+  font-size: 20px;
+  color: #fff;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  letter-spacing: 1.6px;
+  text-transform: uppercase;
+}
+
+.header__btn--title {
+  width: 170px;
+  height: 45px;
+  border-radius: 4px;
+  margin-top: 25px;
+  cursor: pointer;
+  border: 0;
+  background: #2196F3;
+  -webkit-box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+          box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+}
+
+.header__btn--title span {
+  color: #FFF;
+  text-align: center;
+  font-family: Roboto;
+  font-size: 14px;
+  letter-spacing: 0.96px;
+  font-weight: 500;
+}
+
+.features {
+  margin-top: 430px;
+}
+
+.features__inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.features__ul--list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  list-style: none;
+}
+
+.features__li--item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.features__svg--container {
+  width: 300px;
+  border-radius: 4px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 25px 0px 25px 0px;
+  margin-top: 30px;
+  background: #F5F4FA;
+}
+
+.features__svg--container svg {
+  width: 70px;
+  height: 70px;
+}
+
+.features__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.features__h2 {
+  color: #212121;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 0.42px;
+  text-transform: uppercase;
+  margin-top: 30px;
+}
+
+.features__p {
+  color: #757575;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  letter-spacing: 0.42px;
+  margin-top: 10px;
 }
 
 *, *::after, *::before {

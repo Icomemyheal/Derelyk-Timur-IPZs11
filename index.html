@@ -10,7 +10,7 @@
 <body>
     <header class="header">
         <div class="container">
-            <div class="header__inner">
+            <div class="header__inner--line">
                 <a href="#" class="header__logo--link">
                     <h1 class="header__logo">
                         <span>Web</span>Studio
@@ -47,8 +47,75 @@
                     </div>
                 </div>
             </div>
+
+            <div class="header__inner--title">
+                <div class="header__img--overlay"></div>
+                <img src="./images/header_bg.jpg" alt="bg_header" class="header__title--img">
+                
+                <div class="header__title--content">
+                    <h1 class="header__h1--title">Ефективні рішення для вашого бізнесу</h1>
+                    <button type="button" class="header__btn--title"><span>Замовити послугу</span></button>
+                </div>
+            </div>
         </div>
     </header>
+
+    <section class="features section__features">
+        <div class="container">
+            <div class="features__inner">
+                <ul class="features__ul--list">
+                    <li class="features__li--item">
+                        <div class="features__svg--container">
+                            <svg class="satelite">
+                                <use xlink:href="./images/Sprite.svg#satelite"></use>
+                            </svg>
+                        </div>
+
+                        <div class="features__content">
+                            <h2 class="features__h2">УВАГА ДО ДЕТАЛЕЙ</h2>
+                            <p class="features__p">Ідейні міркування, і навіть початок повсякденної роботи з формування позиції.</p>
+                        </div>
+                    </li>
+                    <li class="features__li--item">
+                        <div class="features__svg--container">
+                            <svg class="clock">
+                                <use xlink:href="./images/Sprite.svg#clock"></use>
+                            </svg>
+                        </div>
+
+                        <div class="features__content">
+                            <h2 class="features__h2">ПУНКТУАЛЬНІСТЬ</h2>
+                            <p class="features__p">Завдання організації, особливо рамки і місце навчання кадрів тягне у себе.</p>
+                        </div>
+                    </li>
+                    <li class="features__li--item">
+                        <div class="features__svg--container">
+                            <svg class="diagram">
+                                <use xlink:href="./images/Sprite.svg#diagram"></use>
+                            </svg>
+                        </div>
+
+                        <div class="features__content">
+                            <h2 class="features__h2">ПЛАНУВАННЯ</h2>
+                            <p class="features__p">Так само консультація з широким активом значною мірою зумовлює.</p>
+                        </div>
+                    </li>
+                    <li class="features__li--item">
+                        <div class="features__svg--container">
+                            <svg class="astronaut">
+                                <use xlink:href="./images/Sprite.svg#astronaut"></use>
+                            </svg>
+                        </div>
+
+                        <div class="features__content">
+                            <h2 class="features__h2">СУЧАСНІ ТЕХНОЛОГІЇ</h2>
+                            <p class="features__p">Значимість цих проблем настільки очевидна, що реалізація планових завдань.</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
 <script src="./script.js"></script>
 </body>
 </html>
