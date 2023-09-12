@@ -1,0 +1,7 @@
+.specialization{
+    margin-top:120px;
+    display: none;
+    @include min(1360px){
+        display: block;
+    }
+}

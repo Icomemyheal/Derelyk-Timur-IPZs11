@@ -27,12 +27,18 @@
             width:70px;
             height:70px;
         }
+        @include min(425px){
+            width:400px;
+        }
     }
     &__content{
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items:center;
+        @include min(425px){
+            width:400px;
+        }
     }
     &__h2{
         color:$black;

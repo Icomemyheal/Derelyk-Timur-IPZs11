@@ -3,10 +3,16 @@
         @content;
     }
 }
+@include min(425px) {
+    .container {
+        max-width: 425px;
+        margin:0 auto;
+    }
+}
+
 @include min(576px) {
     .container {
         max-width: 570px;
-        margin:0 auto;
     }
 }
 

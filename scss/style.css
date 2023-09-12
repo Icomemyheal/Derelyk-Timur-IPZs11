@@ -347,10 +347,16 @@ template {
   display: none;
 }
 
+@media screen and (min-width: 425px) {
+  .container {
+    max-width: 425px;
+    margin: 0 auto;
+  }
+}
+
 @media screen and (min-width: 576px) {
   .container {
     max-width: 570px;
-    margin: 0 auto;
   }
 }
 
@@ -524,8 +530,18 @@ template {
   transition: -webkit-transform .3s ease-in;
   transition: transform .3s ease-in;
   transition: transform .3s ease-in, -webkit-transform .3s ease-in;
-  height: 800px;
+  height: 100vh;
   width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  .header__menu {
+    height: 0px;
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+    width: 100%;
+    z-index: 0;
+  }
 }
 
 .header__menu.open {
@@ -707,14 +723,14 @@ template {
 .header__title--img {
   position: absolute;
   top: 0;
-  width: 320px;
+  min-width: 100vw;
   height: 400px;
 }
 
 .header__img--overlay {
   position: absolute;
   top: 0;
-  width: 320px;
+  min-width: 100vw;
   height: 400px;
   z-index: 2;
   background: rgba(39, 39, 39, 0.55);
@@ -830,6 +846,12 @@ template {
   height: 70px;
 }
 
+@media screen and (min-width: 425px) {
+  .features__svg--container {
+    width: 400px;
+  }
+}
+
 .features__content {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -844,6 +866,12 @@ template {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+@media screen and (min-width: 425px) {
+  .features__content {
+    width: 400px;
+  }
 }
 
 .features__h2 {
@@ -863,6 +891,129 @@ template {
   font-size: 14px;
   letter-spacing: 0.42px;
   margin-top: 10px;
+}
+
+.team {
+  margin-top: 60px;
+  background: #F5F4FA;
+}
+
+.team__title {
+  text-align: center;
+  padding-top: 60px;
+  color: #212121;
+  font-family: 'Roboto', sans-serif;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.team__cards--container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+}
+
+.team__cards--list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  list-style: none;
+}
+
+.team__cards--item {
+  border-radius: 0px 0px 4px 4px;
+  background: #FFF;
+  -webkit-box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+          box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  margin-top: 30px;
+  height: 425px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+@media screen and (min-width: 425px) {
+  .team__cards--item {
+    width: 380px;
+    height: 525px;
+  }
+}
+
+@media screen and (min-width: 425px) {
+  .team__img {
+    width: 380px;
+  }
+}
+
+.team__card--name {
+  font-family: 'Roboto', sans-serif;
+  color: #212121;
+  letter-spacing: 0.48px;
+  font-size: 16px;
+  font-style: normal;
+  margin-top: 30px;
+  font-weight: 500;
+}
+
+.team__card--position {
+  font-family: 'Roboto', sans-serif;
+  color: #757575;
+  letter-spacing: 0.48px;
+  font-size: 16px;
+  margin-top: 10px;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.team__card--socials {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 32px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.team__card--socials svg {
+  width: 44px;
+  height: 44px;
+}
+
+.specialization {
+  margin-top: 120px;
+  display: none;
+}
+
+@media screen and (min-width: 1360px) {
+  .specialization {
+    display: block;
+  }
 }
 
 *, *::after, *::before {
