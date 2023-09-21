@@ -36,6 +36,9 @@
         }
         flex-direction: column;
     }
+    &__cards--item:last-child{
+        margin-bottom:60px;
+    }
     &__img{
         @include min(425px){
             width:380px;

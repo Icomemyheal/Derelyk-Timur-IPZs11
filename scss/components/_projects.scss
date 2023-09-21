@@ -1,0 +1,57 @@
+.projects{
+    margin-top:40px;
+    &__inner{
+        display: flex;
+        flex-direction: column;
+    }
+    &__ul--list{
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items:center;
+    }
+    &__li--item{
+        margin-top:30px;
+        width:fit-content;
+        border: 1px solid #EEE;
+        background: #FFF;
+        img{
+            width:290px;
+            height:264px;
+            @include min(425px){
+                width:400px;
+                height:294px;
+            }
+        }
+    }
+    &__li--item:first-child{
+        margin-top:0px;
+    }
+    &__li--item.filtered{
+        display: none;
+    }
+    &__about--container{
+        display: flex;
+        flex-direction: column;
+        padding-left:24px;
+        padding-bottom:20px;
+        justify-content: center;
+    }
+    &__title{
+        color:$black;
+        font-family:'Roboto', sans-serif;
+        font-weight: 700;
+        padding-top:20px;
+        font-size: 18px;
+        letter-spacing:1.08px;
+    }
+    &__type{
+        color:$grey;
+        font-family:'Roboto', sans-serif;
+        font-weight: 400;
+        padding-top:10px;
+        font-size: 16px;
+        letter-spacing:0.48px;
+    }
+}

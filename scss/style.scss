@@ -6,6 +6,11 @@
 @import './components/features';
 @import './components/team';
 @import './components/specialization';
+@import './components/clients';
+@import './components/footer';
+@import './components/filters';
+@import './components/projects';
+
 *,*::after,*::before{
     padding:0;
     margin:0;
@@ -22,7 +27,6 @@ h1,h2,h3,h4,h5,h6{
 }
 body.fixing, html.fixing{
     width:100vw;
-    // height:100vw;
     overflow:hidden;
 }
 .container{
@@ -30,4 +34,15 @@ body.fixing, html.fixing{
     width: 100%;
     padding-left: 15px;
     padding-right: 15px;
+}
+.overlay{ 
+    height: 100%;
+    width:calc(100vw + 5px);
+    position: fixed; /* Stay in place */
+    z-index: 999; /* Sit on top */
+    left: 0;
+    top: 0;
+    background-color: rgb(0,0,0); /* Black fallback color */
+    background-color: rgba(0,0,0, 0.85); /* Black w/opacity */
+    transition: 0.5s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
 }
