@@ -1,0 +1,79 @@
+.hero{
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('/images/hero_bg.png');
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    background-position: center;
+    align-items:center;
+    height:400px;
+    @include min(992px){
+        height:500px;
+    }
+    @include min(1360px){
+        height:600px;
+    }
+    &__content{
+        display: flex;
+        justify-items: center;
+        align-items:center;
+        flex-direction: column;
+    }
+    &__h1--title{
+        font-size:20px;
+        color:#fff;
+        font-family: 'Roboto', sans-serif;
+        font-weight:900;
+        text-align: center;
+        letter-spacing: 1.6px;
+        line-height: 32px;
+        text-transform: uppercase;
+        @include min(425px){
+            font-size:26px;
+            font-weight:900;
+        }
+        @include min(576px){
+            width:420px;
+        }
+        @include min(992px){
+            width:606px;
+            letter-spacing:2.6px;
+            font-size:38px;
+            line-height: 60px;
+        }
+        @include min(1920px){
+            font-size:42px;
+        }
+    }
+    &__btn{
+        width:fit-content;
+        height: 45px;
+        padding:0px 15px 0px 15px;
+        border-radius:4px;
+        margin-top:25px;
+        cursor: pointer;
+        border:0;
+        background:$accentColor;
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+        @include min(576px){
+            padding:0px 24px 0px 24px;
+            height:50px;
+        }
+        @include min(1920px){
+            padding:0px 28px 0px 28px;
+        }
+    }
+    &__btn span{
+        color: #FFF;
+        text-align: center;
+        font-family: Roboto;
+        font-size: 14px;
+        letter-spacing: 0.96px;
+        font-weight:500;
+        @include min(576px){
+            font-size: 16px;
+        }
+        @include min(1920px){
+            font-size:18px;
+        }
+    }
+}

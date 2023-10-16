@@ -2,14 +2,23 @@
     margin-top:60px;
     &__inner{
         display: flex;
-        // flex-wrap: wrap;
-        // width:100%;
+        @include min(768px){
+            justify-content: center;
+            align-items:center;
+            flex-direction: row;
+        }
     }
     &__ul--list{
         display: flex;
         list-style: none;
         flex-wrap: wrap;
         max-width:480px;
+        @include min(576px){
+            max-width:630px;
+        }
+        @include min(768px){
+            flex-wrap: nowrap;
+        }
     }
     &__li--item{
         margin-left:8px;
@@ -20,9 +29,17 @@
     .design__item{
         margin-left:0;
         margin-top:20px;
+        @include min(768px){
+            margin-left:8px;
+            margin-top:0px;
+        }
     }
     .marketing__item{
         margin-top:20px;
+        @include min(768px){
+            margin-left:8px;
+            margin-top:0px;
+        }
     }
     &__btn{
         background:#F5F4FA;
@@ -40,6 +57,13 @@
         letter-spacing:0.48px;
         transition: all .3s ease-in;
         @include min(425px){
+            padding:0px 22px 0px 22px;
+        }
+        @include min(576px){
+            padding:0px 45px 0px 45px;
+            font-size:18px;
+        }
+        @include min(768px){
             padding:0px 22px 0px 22px;
         }
     }

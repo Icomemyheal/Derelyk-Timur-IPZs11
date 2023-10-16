@@ -2,14 +2,38 @@
 .header{
     height:60px;
     background:#fff;
-    &__inner--line{
+    @include min(768px){
+        height:80px;
+    }
+    &__top{
         display: flex;
+        position: relative;
         align-items:center;
         justify-content:space-between;
         padding:16px 0px 16px 0px;
+        @include min(1440px){
+            padding:25px 0px 25px 0px;
+        }
+    }
+    &__top::after{
+        @include min(768px){
+            content:"";
+            position: absolute;
+            bottom:-6px;
+            left:-60px;
+            height:1px;
+            width:100vw;
+            background: #ECECEC;
+        }
+        @include min(1440px){
+            bottom:-1px;
+        }
     }
     &__logo--link{
         text-decoration:none;
+        @include min(992px){
+            margin-left:80px;
+        }
     }
     &__logo{
         font-family:'Raleway', sans-serif;
@@ -17,6 +41,9 @@
         font-size:24px;
         font-weight:700;
         letter-spacing:0.72px;
+        @include min(1920px){
+            font-size:26px;
+        }
     }
     &__logo span{
         color:$accentColor;
@@ -30,6 +57,9 @@
         width:20px;
         border-radius:1px;
         background-color:$black;
+        @include min(768px){
+            display: none;
+        }
         &::after{
             content: "";
             border-radius:1px;
@@ -81,18 +111,23 @@
     &__menu{
         position:absolute;
         top:0;
-        left:0;
+        right:-15px;
         z-index:1000;
         background:#fff;
         transform: translateX(-510px);
         transition: transform .3s ease-in;
         height:100vh;
-        width:100%;
+        width:100vw;
+        @include min(576px){
+            transform: translateX(-580px);
+        }
         @include min(768px){
             height:0px;
             transform: translateX(0px);
             width:100%;
+            height:100%;
             z-index:0;
+            position: static;
         }
     }
     &__menu.open{
@@ -102,6 +137,13 @@
         display: flex;
         flex-direction: column;
         padding-left:25px;
+        @include min(768px){
+          padding-left:0px;
+          flex-direction: row;
+          justify-content: space-around;
+          align-items:center;
+          height:auto;  
+        }
     }
     &__nav--menu{
         display: flex;
@@ -110,16 +152,53 @@
         list-style: none;
         display: flex;
         flex-direction: column;
-        // @include min(768px){
-        //     display: flex;
-        //     flex-direction: row;
-        // }
+        @include min(768px){
+            display: flex;
+            flex-direction: row;
+        }
     }
     &__nav--item{
         margin-top:32px;
+        position: relative;
+        @include min(768px){
+            margin-top:0px;
+            margin-left:50px;
+        }
+    }
+    &__nav--item::after{
+        @include min(768px){
+            content: "";
+            position: absolute;
+            bottom: -33px;
+            left:0;
+            right:0;
+            width:100%;
+            height: 2px;
+            background-color: $accentColor;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+        @include min(996px){
+            bottom:-26px;
+        }
+        @include min(1440px){
+            bottom: -20px;
+        }
+    }
+    &__nav--item:hover::after{
+        @include min(768px){
+            opacity: 1;
+        }
     }
     &__nav--item:first-child{
         margin-top:48px;
+        @include min(768px){
+            margin-top:0px;
+            margin-left:20px;
+        }
+        @include min(1200px){
+            margin-left:40px;
+        }
     }
     &__nav--link{
         text-decoration: none;
@@ -129,6 +208,17 @@
         color:$black;
         transition: color .3s ease-out;
         font-size: 36px;
+        @include min(576px){
+           font-size:40px;
+        }
+        @include min(768px){
+            font-size:14px;
+            letter-spacing:0.28px;
+            min-width:80px;
+        }
+        @include min(1200px){
+            font-size:16px;
+        }
     }
     &__nav--link:hover{
         color:$accentColor;
@@ -136,7 +226,16 @@
     &__menu--contacts{
         display: flex;
         flex-direction: column;
+        list-style: none;
         margin-top:306px;
+        @include min(768px){
+            flex-direction:column-reverse;
+            margin-top:0px;
+        }
+        @include min(1440px){
+            flex-direction: row;
+            align-items:center;
+        }
     }
     &__menu--tel{
         font-family: 'Roboto', sans-serif;
@@ -146,19 +245,88 @@
         letter-spacing: 0.68px;
         transition: color .3s ease-out;
         font-size: 28px;    
+        @include min(576px){
+            font-size:32px;
+        }
+        @include min(768px){
+            font-size:12px;
+            color:$grey;
+            letter-spacing: 0.24px;
+        }
+        @include min(992px){
+            font-size:14px;
+        }
     }
     &__menu--tel:hover{
         color:$accentColor;
+    }
+    &__menu--contacts-item{
+        @include min(768px){
+            display: flex;
+            align-items:center;
+        }
+        svg{
+            display: none;
+            @include min(768px){
+                display: inline-block;
+            }
+        }
+        .smartphone{
+            margin-right:8px;
+            width: 16px;
+            height: 16px;
+            @include min(1920px){
+                width:18px;
+                height:18px;
+            }
+        }
+        .envelope{
+            margin-right:8px;
+            width: 16px;
+            height: 16px;
+            @include min(1920px){
+                width:18px;
+                height:18px;
+            }
+        }
+    }
+    &__menu--contacts-item:first-child{
+        @include min(768px){
+            margin-top:10px;
+        }
+        @include min(1440px){
+            margin-top:0px;
+        }
+    }
+    &__menu--contacts-item:last-child{
+        margin-top:32px;
+        @include min(768px){
+            margin-top:0px;
+        }
+        @include min(1440px){
+            margin-top:0px;
+            margin-left:60px;
+        }
     }
     &__menu--email{
         font-family: 'Roboto', sans-serif;
         font-weight:500;
         text-decoration:none;
         color:$grey;
-        margin-top:32px;
         transition: color .3s ease-out;
         letter-spacing: 0.48px;
-        font-size: 22px;    
+        font-size: 22px;  
+        @include min(576px){
+            font-size:24px;
+        }
+        @include min(768px){
+            font-size:12px;
+            color:$grey;
+            letter-spacing: 0.24px;
+        }  
+        @include min(992px){
+            font-size:14px;
+        }
     }
     &__menu--email:hover{
         color:$accentColor;
@@ -166,6 +334,9 @@
     &__menu--socials{
         display: flex;
         margin-top:170px;
+        @include min(768px){
+            display: none;
+        }
     }
     &__socials--list{
         display: flex;
@@ -186,6 +357,9 @@
         width:1px;
         height:20px;
         background: rgba(57, 57, 57, 0.2);
+        @include min(576px){
+            left:94px;
+        } 
     }
     &__socials--item::before{
         content: '';
@@ -195,6 +369,9 @@
         width:1px;
         height:20px;
         background: rgba(57, 57, 57, 0.2);
+        @include min(576px){
+            left:167px;
+        } 
     }
     .item-line::after{
         content: '';
@@ -204,6 +381,9 @@
         width:1px;
         height:20px;
         background: rgba(39, 39, 39, 0.550);
+        @include min(576px){
+            left:265px;
+        } 
     }
     &__socials--link{
         color:$accentColor;
@@ -211,64 +391,9 @@
         font-family: 'Roboto', sans-serif;
         font-weight:500;
         font-size: 16px;
-    }
-    &__inner--title{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items:center;
-        position: relative;
-    }
-    &__title--img{
-        position: absolute;
-        top:0;
-        min-width:100vw;
-        height:400px;
-    }
-    &__img--overlay{
-        position: absolute;
-        top:0;
-        min-width:100vw;
-        height:400px;
-        z-index:2;
-        background: rgba(39, 39, 39, 0.550);
-    }
-    &__title--content{
-        position: relative;
-        z-index:998;
-        text-align: center;
-        display: flex;
-        margin-top:118px;
-        flex-direction: column;
-        justify-content:center;
-        align-items:center;
-        
-    }
-    &__h1--title{
-        font-size:20px;
-        color:#fff;
-        font-family: 'Roboto', sans-serif;
-        font-weight:700;
-        letter-spacing: 1.6px;
-        text-transform: uppercase;
-    }
-    &__btn--title{
-        width:170px;
-        height: 45px;
-        border-radius:4px;
-        margin-top:25px;
-        cursor: pointer;
-        border:0;
-        background:$accentColor;
-        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
-    }
-    &__btn--title span{
-        color: #FFF;
-        text-align: center;
-        font-family: Roboto;
-        font-size: 14px;
-        letter-spacing: 0.96px;
-        font-weight:500;
+        @include min(576px){
+            font-size:20px;
+        }  
     }
     &__modal{
         position: absolute;
@@ -281,11 +406,36 @@
         border-radius: 4px;
         background: #FFF;
         box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.20), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
-        width:400px;
+        width:280px;
         height:610px;
         padding:15px;
         transition: all 0.3s ease-out;
+        @include min(425px){
+            width:340px;
+        }
+        @include min(576px){
+            width:480px;
+        }
+        @include min(1440px){
+            width:528px;
+        }
     }
+    // &__modal::after{
+    //     content: "";
+    //     position: absolute;
+    //     top:0;
+    //     left:0;
+    //     width:100%;
+    //     height:100%;
+    //     background: rgba(51, 51, 51, 0.6) url('/images/loading-gif.gif') center / 50px no-repeat;
+    //     opacity: 0;
+    //     visibility: hidden;
+    //     transition: all 0.5s ease-in;
+    // }
+    // &__modal._sending::after{
+    //     opacity:1;
+    //     visibility: visible;
+    // }
     &__modal.active{
         opacity: 1;
         visibility: visible;
@@ -299,19 +449,40 @@
     &__modal--form{
         display: flex;
         flex-direction: column;
+        position: relative;
+        svg{
+            width:18px;
+            height:18px;
+            position: absolute;
+            top:11px;
+            left:8px;
+        }
+        div{
+            position: relative;
+        }
     }
     &__modal--form input{
-        width:370px;
+        width:240px;
         height:40px;
         border-radius:4px;
         margin-bottom:15px;
         color:$grey;
         font-family: 'Roboto', sans-serif;
         font-size:14px;
-        padding-left:10px;
+        padding-left:30px;
         letter-spacing:0.14px;
         font-weight:400;
         border: 1px solid rgba(33, 33, 33, 0.20);
+        @include min(425px){
+            width:315px;
+        }
+        @include min(576px){
+            width:450px;
+        }
+
+    }
+    &__modal--form input._error{
+        box-shadow: 0 0 10px rgb(240, 99, 99);
     }
     &__modal--form input:focus{
         outline:1px solid $accentColor;
@@ -322,7 +493,7 @@
         margin-bottom:0px;
     }
     &__textarea--commentary{
-        width: 370px;
+        width:240px;
         height: 120px;
         border-radius:4px;
         border: 1px solid rgba(33, 33, 33, 0.20);
@@ -334,12 +505,19 @@
         padding-left:10px;
         padding-top:5px;
         font-weight:400;
+        @include min(425px){
+            width:315px;
+        }
+        @include min(576px){
+            width:450px;
+        }
     }
     &__textarea--commentary:focus{
         outline:1px solid $accentColor;
     }
     &__modal--title{
-        width: 300px;
+        width:fit-content;
+        margin-bottom:12px;
         text-align: center;
         font-family: 'Roboto', sans-serif;
         font-size:20px;
@@ -347,6 +525,12 @@
         font-weight:700;
         line-height:30px;
         letter-spacing:0.6px;
+        @include min(576px){
+            font-size:22px;
+        }
+        @include min(1440px){
+            padding-top:10px;
+        }
     }
     &__form--span{
         font-size:12px;
@@ -355,6 +539,9 @@
         font-weight:500;
         margin-bottom:4px;
         letter-spacing:0.12px;
+        @include min(576px){
+            font-size:14px;
+        }
     }
     &__span--checkbox{
         font-family: 'Roboto', sans-serif;
@@ -363,6 +550,9 @@
         font-weight: 400;
         margin-left:10px;
         letter-spacing: 0.36px;
+        @include min(576px){
+            font-size:14px;
+        }
     }
     &__form--checkbox{
         display: flex;
@@ -374,8 +564,9 @@
         color:$accentColor;
     }
     &__form--btnSubmit{
-        width: 200px;
-        height: 50px;
+        width: fit-content;
+        padding:0px 25px 0px 25px;
+        height: 35px;
         background:$accentColor;
         color:#FFF;
         font-family: 'Roboto', sans-serif;
@@ -388,6 +579,21 @@
         letter-spacing: 0.96px;
         border-radius:4px;
         box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+        transition: all .3s ease-in;
+        @include min(576px){
+            height:40px;
+            padding:0px 35px 0px 35px;
+        }
+        @include min(1200px){
+            height:45px;
+            padding:0px 52px 0px 52px;
+        }
+        @include min(1440px){
+            height:50px;
+        }
+    }
+    &__form--btnSubmit:hover{
+        transform: scale(110%);
     }
     &__modal--close{
         position: absolute;
@@ -429,11 +635,20 @@
     &__btn--elipse{
         position: absolute;
         top:-21px;
-        left:349px;
+        left:224px;
         border:1px solid $grey;
         border-radius:50%;
         width:30px;
         height:30px;
+        @include min(425px){
+            left:285px;
+        }
+        @include min(576px){
+            left:429px;
+        }
+        @include min(1440px){
+            left:460px;
+        }
     }
     &__btn--closeModal &__modal--close{
         background-color:transparent !important;
@@ -443,18 +658,36 @@
     &__btn--closeModal &__modal--close::after{
         background-color:$black;
         top:-10px;
-        left:375px;
+        left:250px;
         width:18px;
         transform: translate3d(0, 10px, 0) rotate(-45deg);
         transition: top .2s cubic-bezier(.33333,0,.66667,.33333), transform .13s cubic-bezier(.215,.61,.355,1) .22s;
+        @include min(425px){
+            left:311px;
+        }
+        @include min(576px){
+            left:455px;
+        }
+        @include min(1440px){
+            left:486px
+        }
     }
     &__btn--closeModal &__modal--close::before{
         background-color:$black;
         top:-10px;
-        left:375px;
+        left:250px;
         width:18px;
         transform: translate3d(0, 10px, 0) rotate(45deg);
         transition: top .1s cubic-bezier(.33333,0,.66667,.33333) .1s,transform .13s cubic-bezier(.215,.61,.355,1) .22s;
+        @include min(425px){
+            left:311px;
+        }
+        @include min(576px){
+            left:455px;
+        }
+        @include min(1440px){
+            left:486px
+        }
     }
     &__btn--closeModal:focus &__modal--close::after{
         background-color:$accentColor;

@@ -1,7 +1,73 @@
 .specialization{
     margin-top:120px;
     display: none;
-    @include min(1360px){
-        display: block;
+    @include min(1200px){
+        display: flex;                            
     }
-}
+    &__title{
+        text-align: center;
+        font-family:'Roboto', sans-serif;
+        color:$black;
+        font-size:36px;
+        font-weight:700;
+        letter-spacing:1.08px;
+        margin-bottom:50px;
+    }
+    &__ul--list{
+        display: flex;
+        justify-content: center;
+        align-items:center;
+        list-style: none;
+    }
+    &__li--item{
+        position: relative;
+        margin-left:30px;
+        @include min(1920px){
+            margin-left:35px;
+        }
+    }    
+    &__li--item:first-child{
+        margin-left:0px;
+    }
+    &__titleImg--container{
+        position: absolute;
+        width:340px;
+        height:70px;
+        display: flex;
+        justify-content: center;
+        align-items:center;
+        bottom:0;
+        left:0;
+        text-align: center;
+        background: rgba(47, 48, 58, 0.80);
+        @include min(1440px){
+            width:400px;
+        }
+        @include min(1920px){
+            width:510px;
+        }
+    }
+    &__title--img{
+        color: #FFF;
+        text-align: center;
+        font-family: Roboto;
+        font-size: 14px;
+        font-weight: 500;
+        letter-spacing: 0.42px;
+        text-transform: uppercase;
+    }           
+    &__img--container{
+        img{
+            @include min(1200px){
+                width:340px;
+            }
+            @include min(1440px){
+                width:400px;
+            }
+            @include min(1920px){
+                width:510px;
+            }
+        }
+    } 
+
+}       

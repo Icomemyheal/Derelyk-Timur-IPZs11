@@ -1,13 +1,13 @@
-const burgerBtn = document.querySelector('.header__btn--menu');
-const headerMenu = document.querySelector('.header__menu');
+//Utils
 const body = document.getElementsByTagName('body');
-
-// Modal
+//BurgerMenu
+const burgerBtn = document.querySelector('.js-header__btn--menu');
+const headerMenu = document.querySelector('.js-header__menu');
+// Modals
 const btnOrderOpenModal = document.querySelector('.js-order-btn');
 const modal = document.querySelector('.js-modal');
 const btnCloseModal = document.querySelector('.js-close-modal');
 const modalOverlay = document.querySelector('.js-modal-overlay');
-
 //Filters
 const filtersBtns = document.querySelectorAll('.filters__btn');
 const projectItems = document.querySelectorAll('.js-projects-items');
@@ -29,7 +29,7 @@ const filteredBtn = filtersBtns.forEach((btn) => {
         }
     });
 });
-
+// Events
 burgerBtn.addEventListener('click', (e) => {
     e.preventDefault();
     burgerBtn.classList.toggle('active');

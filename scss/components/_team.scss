@@ -8,12 +8,21 @@
         font-family:'Roboto', sans-serif;
         font-size:28px;
         font-weight:700;
+        @include min(1200px){
+            font-size:36px;
+        }
     }
     &__cards--container{
         display: flex;
         justify-content: center;
         align-items:center;
         text-align: center;
+        @include min(768px){
+            padding-bottom:40px;
+        }
+        @include min(992px){
+            padding-bottom:60px;
+        }
     }
     &__cards--list{
         display: flex;
@@ -21,6 +30,10 @@
         justify-content: center;
         align-items:center;
         list-style: none;
+        @include min(768px){
+            flex-direction: row;
+            flex-wrap:wrap;
+        }
     }
     &__cards--item{
         border-radius: 0px 0px 4px 4px;
@@ -30,19 +43,59 @@
         width:100%;
         margin-top:30px;
         height: 425px;
+        flex-direction: column;
         @include min(425px){
             width:380px;
             height:525px;
         }
-        flex-direction: column;
+        @include min(576px){
+            width:450px;
+            height:625px;
+        }
+        @include min(768px){
+            width:334px;
+            height:536px;
+            margin-left:30px;
+        }
+        @include min(992px){
+            width:404px;
+            height:586px;
+            margin-left:35px;
+        }
+        @include min(1200px){
+            width:247px;
+            height:428px;
+        }
+        @include min(1440px){
+            width:295px;
+            height:428px;
+        }
+        @include min(1920px){
+            width:380px;
+            height:520px;
+        }
     }
     &__cards--item:last-child{
         margin-bottom:60px;
+        @include min(768px){
+            margin-bottom:0px;
+        }
+    }
+    &__cards--item:first-child, &__cards--item:nth-child(3){
+        @include min(768px){
+            margin-left:0px;
+        }
+        @include min(1200px){
+            margin-left:20px;
+        }
+    }
+    .ml-n:first-child{
+        @include min(1200px){
+            margin-left:0px;
+        }
     }
     &__img{
-        @include min(425px){
-            width:380px;
-        }
+        width:100%;
     }
     &__card--name{
         font-family:'Roboto', sans-serif;
@@ -51,25 +104,81 @@
         font-size: 16px;
         font-style: normal;
         margin-top:30px;
+        margin-bottom:10px;
         font-weight: 500;
+        @include min(576px){
+            font-size:18px;
+        }
     }
     &__card--position{
         font-family:'Roboto', sans-serif;
         color:$grey;
         letter-spacing: 0.48px;
         font-size: 16px;
-        margin-top:10px;
         font-style: normal;
         font-weight:400;
+        @include min(576px){
+            font-size:18px;
+        }
+    }
+    &__circle{
+        position: absolute;
+        width:44px;
+        height:44px;
+        display: flex;
+        justify-content:center;
+        align-items:center;
+        background:#FFF;
+        border-radius:50%;
+        transition:all .3s ease-in;
+    }
+    &__circle:hover{
+        background:$accentColor;
+        svg{
+            fill:#FFF;
+        }
+    }
+    &__social--link{
+        display: flex;
+        width:44px;
+        height:44px;
+        background:#FFF;
+        justify-content: center;
+        align-items:center;
+        @include min(425px){
+            margin-left:34px;
+        }
+        @include min(1200px){
+            margin-left:20px;
+        }
+    }
+    &__social--link:first-child{
+        margin-left:0px;
     }
     &__card--socials{
+        position: relative;
         display: flex;
+
         justify-content: center;
         margin-top:32px;
         align-items:center;
+        @include min(1440px){
+            margin-top:10px;
+        }
         svg{
-            width:44px;
-            height:44px;
+            position: relative;
+            width:20px;
+            height:20px;
+            fill:#afb1b8;
+            transition: all .3s ease-in;
+            @include min(576px){
+                width:24px;
+                height:24px;
+            }
+            @include min(1200px){
+                width:20px;
+                height:20px;
+            }
         }
     }
 }
