@@ -1159,6 +1159,7 @@ template {
   width: 16px;
   height: 15px;
   margin-bottom: 0px;
+  outline: none;
 }
 
 .header__textarea--commentary {
@@ -1382,8 +1383,12 @@ template {
 
 @media screen and (min-width: 1440px) {
   .header__btn--elipse {
-    left: 460px;
+    left: 473px;
   }
+}
+
+.header__btn--elipse:hover {
+  border-color: #2196F3;
 }
 
 .header__btn--closeModal .header__modal--close {
@@ -1420,7 +1425,7 @@ template {
 
 @media screen and (min-width: 1440px) {
   .header__btn--closeModal .header__modal--close::after {
-    left: 486px;
+    left: 499px;
   }
 }
 
@@ -1451,15 +1456,15 @@ template {
 
 @media screen and (min-width: 1440px) {
   .header__btn--closeModal .header__modal--close::before {
-    left: 486px;
+    left: 499px;
   }
 }
 
-.header__btn--closeModal:focus .header__modal--close::after {
+.header__btn--closeModal:hover .header__modal--close::after {
   background-color: #2196F3;
 }
 
-.header__btn--closeModal:focus .header__modal--close::before {
+.header__btn--closeModal:hover .header__modal--close::before {
   background-color: #2196F3;
 }
 

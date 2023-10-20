@@ -491,6 +491,7 @@
         width:16px;
         height:15px;
         margin-bottom:0px;
+        outline: none;
     }
     &__textarea--commentary{
         width:240px;
@@ -647,8 +648,11 @@
             left:429px;
         }
         @include min(1440px){
-            left:460px;
+            left:473px;
         }
+    }
+    &__btn--elipse:hover{
+        border-color:$accentColor;
     }
     &__btn--closeModal &__modal--close{
         background-color:transparent !important;
@@ -669,7 +673,7 @@
             left:455px;
         }
         @include min(1440px){
-            left:486px
+            left:499px
         }
     }
     &__btn--closeModal &__modal--close::before{
@@ -686,13 +690,13 @@
             left:455px;
         }
         @include min(1440px){
-            left:486px
+            left:499px
         }
     }
-    &__btn--closeModal:focus &__modal--close::after{
+    &__btn--closeModal:hover &__modal--close::after{
         background-color:$accentColor;
     }
-    &__btn--closeModal:focus &__modal--close::before{
+    &__btn--closeModal:hover &__modal--close::before{
         background-color:$accentColor;
     }
 }
