@@ -18,8 +18,8 @@
         top:0;
         left:0;
         opacity:0;
+        visibility: hidden;
         z-index:-1;
-        transform: translateY(264px);
         transition: all .3s ease-in;
         @include min(425px){
             width:400px;
@@ -129,11 +129,11 @@
             }
         }
     }
-    &__li--item:hover{
+    &__img--container:hover{
         .projects__overlay{
-            opacity:0.8;
-            z-index:2;
-            transform: translateY(0px);
+            opacity: 0.8;
+            z-index:1;
+            visibility: visible;
         }
     }
     &__li--item:first-child{
@@ -153,7 +153,7 @@
         color:$black;
         font-family:'Roboto', sans-serif;
         font-weight: 700;
-        padding-top:20px;
+        margin-top:20px;
         font-size: 18px;
         letter-spacing:1.08px;
         @include min(768px){
@@ -164,7 +164,7 @@
         color:$grey;
         font-family:'Roboto', sans-serif;
         font-weight: 400;
-        padding-top:10px;
+        margin-top:10px;
         font-size: 16px;
         letter-spacing:0.48px;
     }

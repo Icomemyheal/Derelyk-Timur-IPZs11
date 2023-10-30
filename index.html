@@ -73,26 +73,26 @@
                     <form action="#" method="post" class="header__modal--form" id="form">
                         <span class="header__form--span">Ім'я</span>
                         <div class="header__form--name">
-                            <svg class="icon-person-black">
+                            <svg class="icon-person-black js-icon">
                                 <use xlink:href="./images/Sprite.svg#icon-person-black"></use>
                             </svg>
-                            <input type="text" class="header__input--name _req" name="name" maxlength="25">
+                            <input type="text" class="header__input--name _req js-modal-input" name="name" maxlength="25">
                         </div>
 
                         <span class="header__form--span">Телефон</span>
                         <div class="header__form--phone">
-                            <svg class="icon-phone-black">
+                            <svg class="icon-phone-black js-icon">
                                 <use xlink:href="./images/Sprite.svg#icon-phone-black"></use>
                             </svg>
-                            <input type="number" class="header__input--phone _req" name="phone" maxlength="25">
+                            <input type="number" class="header__input--phone _req js-modal-input" name="phone" maxlength="25">
                         </div>
 
                         <span class="header__form--span">Пошта</span>
                         <div class="header__form--email">
-                            <svg class="icon-email-black">
+                            <svg class="icon-email-black js-icon">
                                 <use xlink:href="./images/Sprite.svg#icon-email-black"></use>
                             </svg>
-                            <input type="email" class="header__input--email _req _email" name="email" maxlength="50">
+                            <input type="email" class="header__input--email _req _email js-modal-input" name="email" maxlength="50">
                         </div>
 
                         <span class="header__form--span">Коментар</span>
@@ -101,8 +101,8 @@
                         </div>
 
                         <div class="header__form--checkbox">
-                            <input type="checkbox" class="header__input--checkbox _req" name="agreement">
-                            <span class="header__span--checkbox">Погоджуюся з розсилкою та приймаю <a href="#" class="header__link--checkbox">Умови договору</a></span>
+                            <input type="checkbox" class="header__input--checkbox _req js-modal-checkbox" name="agreement">
+                            <span class="header__span--checkbox js-span-checkbox">Погоджуюся з розсилкою та приймаю <a href="#" class="header__link--checkbox">Умови договору</a></span>
                         </div>
 
                         <button type="submit" class="header__form--btnSubmit">Відправити</button>
@@ -189,7 +189,7 @@
                     <ul class="specialization__ul--list">
                         <li class="specialization__li--item">
                             <div class="specialization__img--container">
-                                <img src="./images/desktop_app-img.jpg" alt="desktopApp" class="specialization__desktop--img">
+                                <img src="./images/desktop_app-img.jpg" loading="lazy" alt="desktopApp" class="specialization__desktop--img">
                             </div>
                             <div class="specialization__titleImg--container">
                                 <h3 class="specialization__title--img">Десктопні додатки</h3>
@@ -197,7 +197,7 @@
                         </li>
                         <li class="specialization__li--item">
                             <div class="specialization__img--container">
-                                <img src="./images/mobile_app-img.jpg" alt="mobileApp" class="specialization__mobile--img">
+                                <img src="./images/mobile_app-img.jpg" loading="lazy" alt="mobileApp" class="specialization__mobile--img">
                             </div>
                             <div class="specialization__titleImg--container">
                                 <h3 class="specialization__title--img">Мобільні додатки</h3>
@@ -205,7 +205,7 @@
                         </li>
                         <li class="specialization__li--item">
                             <div class="specialization__img--container">
-                                <img src="./images/designer-answer-img.jpg" alt="designerAnswer" class="specialization__answer--img">
+                                <img src="./images/designer-answer-img.jpg" loading="lazy" alt="designerAnswer" class="specialization__answer--img">
                             </div>
                             <div class="specialization__titleImg--container">
                                 <h3 class="specialization__title--img">Дизайнерські рішення</h3>
@@ -225,7 +225,7 @@
                         <ul class="team__cards--list">
                             <li class="team__cards--item ml-n">
                                 <div class="team__card--img-container">
-                                    <img src="./images/team_first.jpg" alt="first_In_team" class="team__first--img team__img">
+                                    <img src="./images/team_first.jpg" loading="lazy" alt="first_In_team" class="team__first--img team__img">
                                 </div>
     
                                 <div class="team__card--content">
@@ -233,28 +233,28 @@
                                     <span class="team__card--position">Product Designer</span>
     
                                     <div class="team__card--socials">
-                                        <a href="#" class="team__social--link">
+                                        <a href="https://www.instagram.com/" target="_blank" class="team__social--link">
                                             <div class="team__circle">
                                                 <svg class="team-instagram">
                                                     <use xlink:href="./images/Sprite.svg#icon-instagram"></use>
                                                 </svg>
                                             </div>
                                         </a>
-                                        <a href="#" class="team__social--link">
+                                        <a href="https://twitter.com/" target="_blank" class="team__social--link">
                                             <div class="team__circle">
                                                 <svg class="team-twitter">
                                                     <use xlink:href="./images/Sprite.svg#icon-twitter"></use>
                                                 </svg>
                                             </div>
                                         </a>
-                                        <a href="#" class="team__social--link">
+                                        <a href="https://www.facebook.com/" target="_blank" class="team__social--link">
                                             <div class="team__circle">
                                                 <svg class="team-facebook">
                                                     <use xlink:href="./images/Sprite.svg#icon-facebook"></use>
                                                 </svg>
                                             </div>
                                         </a>
-                                        <a href="#" class="team__social--link">
+                                        <a href="https://www.linkedin.com/" target="_blank" class="team__social--link">
                                             <div class="team__circle">
                                                 <svg class="team-linkedin">
                                                     <use xlink:href="./images/Sprite.svg#icon-linkedin"></use>
@@ -266,7 +266,7 @@
                             </li>
                             <li class="team__cards--item">
                                 <div class="img__card--container">
-                                    <img src="./images/team_second.jpg" alt="second_In_team" class="team__second--img team__img">
+                                    <img src="./images/team_second.jpg" loading="lazy" alt="second_In_team" class="team__second--img team__img">
                                 </div>
     
                                 <div class="team__card--content">
@@ -274,28 +274,28 @@
                                     <span class="team__card--position">Frontend Developer</span>
     
                                     <div class="team__card--socials">
-                                        <a href="#" class="team__social--link">
+                                        <a href="https://www.instagram.com/" target="_blank" class="team__social--link">
                                             <div class="team__circle">
                                                 <svg class="team-instagram">
                                                     <use xlink:href="./images/Sprite.svg#icon-instagram"></use>
                                                 </svg>
                                             </div>
                                         </a>
-                                        <a href="#" class="team__social--link">
+                                        <a href="https://twitter.com/" target="_blank" class="team__social--link">
                                             <div class="team__circle">
                                                 <svg class="team-twitter">
                                                     <use xlink:href="./images/Sprite.svg#icon-twitter"></use>
                                                 </svg>
                                             </div>
                                         </a>
-                                        <a href="#" class="team__social--link">
+                                        <a href="https://www.facebook.com/" target="_blank" class="team__social--link">
                                             <div class="team__circle">
                                                 <svg class="team-facebook">
                                                     <use xlink:href="./images/Sprite.svg#icon-facebook"></use>
                                                 </svg>
                                             </div>
                                         </a>
-                                        <a href="#" class="team__social--link">
+                                        <a href="https://www.linkedin.com/" target="_blank" class="team__social--link">
                                             <div class="team__circle">
                                                 <svg class="team-linkedin">
                                                     <use xlink:href="./images/Sprite.svg#icon-linkedin"></use>
@@ -307,7 +307,7 @@
                             </li>
                             <li class="team__cards--item ml-n">
                                 <div class="img__card--container">
-                                    <img src="./images/team_third.jpg" alt="third_In_team" class="team__third--img team__img">
+                                    <img src="./images/team_third.jpg" loading="lazy" alt="third_In_team" class="team__third--img team__img">
                                 </div>
     
                                 <div class="team__card--content">
@@ -315,28 +315,28 @@
                                     <span class="team__card--position">Marketing</span>
     
                                     <div class="team__card--socials">
-                                        <a href="#" class="team__social--link">
+                                        <a href="https://www.instagram.com/" target="_blank" class="team__social--link">
                                             <div class="team__circle">
                                                 <svg class="team-instagram">
                                                     <use xlink:href="./images/Sprite.svg#icon-instagram"></use>
                                                 </svg>
                                             </div>
                                         </a>
-                                        <a href="#" class="team__social--link">
+                                        <a href="https://twitter.com/" target="_blank" class="team__social--link">
                                             <div class="team__circle">
                                                 <svg class="team-twitter">
                                                     <use xlink:href="./images/Sprite.svg#icon-twitter"></use>
                                                 </svg>
                                             </div>
                                         </a>
-                                        <a href="#" class="team__social--link">
+                                        <a href="https://www.facebook.com/" target="_blank" class="team__social--link">
                                             <div class="team__circle">
                                                 <svg class="team-facebook">
                                                     <use xlink:href="./images/Sprite.svg#icon-facebook"></use>
                                                 </svg>
                                             </div>
                                         </a>
-                                        <a href="#" class="team__social--link">
+                                        <a href="https://www.linkedin.com/" target="_blank" class="team__social--link">
                                             <div class="team__circle">
                                                 <svg class="team-linkedin">
                                                     <use xlink:href="./images/Sprite.svg#icon-linkedin"></use>
@@ -348,7 +348,7 @@
                             </li>
                             <li class="team__cards--item">
                                 <div class="img__card--container">
-                                    <img src="./images/team_four.jpg" alt="four_In_team" class="team__four--img team__img">
+                                    <img src="./images/team_four.jpg" loading="lazy" alt="four_In_team" class="team__four--img team__img">
                                 </div>
                                 
                                 <div class="team__card--content">
@@ -356,28 +356,28 @@
                                     <span class="team__card--position">UI Designer</span>
     
                                     <div class="team__card--socials">
-                                        <a href="#" class="team__social--link">
+                                        <a href="https://www.instagram.com/" target="_blank" class="team__social--link">
                                             <div class="team__circle">
                                                 <svg class="team-instagram">
                                                     <use xlink:href="./images/Sprite.svg#icon-instagram"></use>
                                                 </svg>
                                             </div>
                                         </a>
-                                        <a href="#" class="team__social--link">
+                                        <a href="https://twitter.com/" target="_blank" class="team__social--link">
                                             <div class="team__circle">
                                                 <svg class="team-twitter">
                                                     <use xlink:href="./images/Sprite.svg#icon-twitter"></use>
                                                 </svg>
                                             </div>
                                         </a>
-                                        <a href="#" class="team__social--link">
+                                        <a href="https://www.facebook.com/" target="_blank" class="team__social--link">
                                             <div class="team__circle">
                                                 <svg class="team-facebook">
                                                     <use xlink:href="./images/Sprite.svg#icon-facebook"></use>
                                                 </svg>
                                             </div>
                                         </a>
-                                        <a href="#" class="team__social--link">
+                                        <a href="https://www.linkedin.com/" target="_blank" class="team__social--link">
                                             <div class="team__circle">
                                                 <svg class="team-linkedin">
                                                     <use xlink:href="./images/Sprite.svg#icon-linkedin"></use>

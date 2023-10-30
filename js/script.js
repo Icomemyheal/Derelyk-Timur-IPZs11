@@ -11,13 +11,50 @@ const modalOverlay = document.querySelector('.js-modal-overlay');
 //Filters
 const filtersBtns = document.querySelectorAll('.filters__btn');
 const projectItems = document.querySelectorAll('.js-projects-items');
+//Changing Modal Svg
+const modalFormInputs = document.querySelectorAll('.js-modal-input');
+const modalFormSvgs = document.querySelectorAll('.js-icon')
+modalFormInputs.forEach((input, index) => {
+    input.addEventListener('focus', () => {
+        modalFormSvgs[index].setAttribute('fill', '#188CE8');
+    });
 
+    input.addEventListener('blur', () => {
+        modalFormSvgs[index].setAttribute('fill', 'black');
+    });
+});
+//Checkbox State Change
+document.addEventListener('DOMContentLoaded', () => {
+    const spanCheckbox = document.querySelector('.js-span-checkbox');
+    const modalFormCheckbox = document.querySelector('.js-modal-checkbox');
+
+spanCheckbox.addEventListener('click', () => {
+    modalFormCheckbox.checked = !modalFormCheckbox.checked;
+});
+});
+//Active page
+document.addEventListener('DOMContentLoaded', () => {
+    const currentPage = location.pathname.split('/').pop();
+    const navLinks = document.querySelectorAll('.header__nav--link');
+
+const navLink = navLinks.forEach((item) => {
+    let linkPage = item.getAttribute('href').split('/').pop();
+    item.classList.remove('active');
+    if(currentPage == linkPage){
+        item.parentElement.classList.add('active');
+    } else {
+        item.parentElement.classList.remove('active');
+    }
+});
+});
 const filteredBtn = filtersBtns.forEach((btn) => {
     btn.addEventListener(('click'), () => {
         filtersBtns.forEach(item => item.classList.remove('active'));
         btn.classList.add('active');
+        console.log(btn);
         if(btn.classList.contains('active')){
             projectItems.forEach((item) => {
+                console.log(item);
                 if(btn.dataset.type == item.dataset.proj){
                     item.classList.remove('filtered');
                 } else if(btn.dataset.type == 'allIn'){
@@ -29,6 +66,7 @@ const filteredBtn = filtersBtns.forEach((btn) => {
         }
     });
 });
+console.log(projectItems);
 // Events
 burgerBtn.addEventListener('click', (e) => {
     e.preventDefault();

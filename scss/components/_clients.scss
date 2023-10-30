@@ -1,6 +1,9 @@
 .clients{
+    margin-top:60px;
+    @include min(1200px){
+        margin-top:94px;
+    }
     &__title{
-        margin-top:60px;
         color: $black;
         text-align: center;
         font-family: 'Roboto', sans-serif;

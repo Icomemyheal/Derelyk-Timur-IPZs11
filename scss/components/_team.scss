@@ -1,6 +1,9 @@
 .team{
     margin-top:60px;
     background:#F5F4FA;
+    @include min(1200px){
+        margin-top:94px;
+    }
     &__title{
         text-align: center;
         padding-top:60px;
@@ -50,29 +53,28 @@
         }
         @include min(576px){
             width:450px;
-            height:625px;
+            height:605px;
         }
         @include min(768px){
             width:334px;
-            height:536px;
+            height:496px;
             margin-left:30px;
         }
         @include min(992px){
             width:404px;
             height:586px;
-            margin-left:35px;
         }
         @include min(1200px){
             width:247px;
-            height:428px;
+            height:408px;
         }
         @include min(1440px){
             width:295px;
-            height:428px;
+            height:448px;
         }
         @include min(1920px){
             width:380px;
-            height:520px;
+            height:540px;
         }
     }
     &__cards--item:last-child{
@@ -86,7 +88,7 @@
             margin-left:0px;
         }
         @include min(1200px){
-            margin-left:20px;
+            margin-left:30px;
         }
     }
     .ml-n:first-child{
@@ -144,13 +146,8 @@
         height:44px;
         background:#FFF;
         justify-content: center;
+        margin-left:10px;
         align-items:center;
-        @include min(425px){
-            margin-left:34px;
-        }
-        @include min(1200px){
-            margin-left:20px;
-        }
     }
     &__social--link:first-child{
         margin-left:0px;
@@ -158,13 +155,9 @@
     &__card--socials{
         position: relative;
         display: flex;
-
         justify-content: center;
-        margin-top:32px;
+        margin-top:16px;
         align-items:center;
-        @include min(1440px){
-            margin-top:10px;
-        }
         svg{
             position: relative;
             width:20px;

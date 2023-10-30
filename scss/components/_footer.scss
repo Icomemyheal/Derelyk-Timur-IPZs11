@@ -2,11 +2,10 @@
     display: flex;
     margin-top:60px;
     background: #2F303A;
-    // height: 630px;
     @include min(1200px){
         justify-content: center;
         align-items:center;
-        // height:251px;
+        margin-top:94px;
     }
     &__logo span{
         color:$accentColor;
@@ -24,41 +23,14 @@
         @include min(1200px){
             text-align:left;
         }
-        // @include min(768px){
-        //     margin-left:20px;
-        // }
-        // @include min(1200px){
-        //     position: absolute;
-        //     left:60px;
-        //     bottom:28px;
-        //     padding-top:0px;
-        // }
-        // @include min(1440px){
-        //     left:137px;
-        // }
-        // @include min(1920px){
-        //     left:240px;
-        // }
     }
-    // .logo__container{
-    //     @include min(768px){
-    //         margin-left:60px;
-    //         text-align: center;
-    //     }
-    //     @include min(992px){
-    //         margin-left:100px;
-    //     }
-    //     @include min(1200px){
-    //         position: relative;
-    //         margin-left:0;
-    //     }
-    // }
     &__inner{
         display: flex;
         justify-content: center;
         align-items:center;
         flex-direction: column;
         padding-bottom:60px;
+        padding-top:60px;
         @include min(768px){
             justify-content: baseline;
             align-items:baseline;
@@ -67,13 +39,12 @@
         @include min(1200px){
             flex-direction: row;
             justify-content: space-around;
-            align-items:center;
+            align-items:flex-start;
             margin:0 auto;
             padding-bottom:60px;
         }
     }
     &__wrapper{
-        margin-top:60px;
         @include min(768px){
             display: flex;
             gap:155px;
@@ -109,9 +80,6 @@
         display: flex;
         flex-direction: column;
         list-style: none;
-        // @include min(1200px){
-        //     padding-top:50px;
-        // }
     }
     &__address--item{
         color: #FFF;
@@ -140,23 +108,12 @@
         align-items:center;
         @include min(768px){
             margin-top:0px;
+            justify-content: flex-start;
         }
         @include min(1200px){
-            justify-content: baseline;
+            justify-content:flex-start;
             align-items:baseline;
         }
-        // @include min(992px){
-        //     left:345px;
-        // }
-        // @include min(1200px){
-        //     position: static;
-        //     bottom:0px;
-        //     left:0px;
-        //     justify-content:center;
-        //     flex-direction: column;
-        //     margin-top:0px;
-        //     align-items:center;
-        // }
     }
     &__socials--h3{
         text-align: center;
@@ -169,16 +126,6 @@
         @include min(576px){
             font-size:18px;
         }
-        // @include min(768px){
-        //     position:relative;
-        //     bottom:25px;
-        //     left:230px;
-        // }
-        // @include min(1200px){
-        //     position: static;
-        //     bottom:0px;
-        //     left:0px;
-        // }
     }
     &__socials--list{
         display: flex;
@@ -186,12 +133,6 @@
         align-items:center;
         margin-top:30px;
         list-style: none;
-        // @include min(768px){
-        //     margin-top:60px;
-        // }
-        // @include min(1200px){
-        //     margin-top:30px;
-        // }
     }
     &__socials--item{
         position: relative;
@@ -211,6 +152,11 @@
                 height:24px;
             }
         }
+    }
+    &__socials--links{
+        display: flex;
+        justify-content: center;
+        align-items:center;
     }
     &__socials--item:hover{
         .footer__circle{
@@ -238,9 +184,9 @@
             margin:60px auto;
         }
         @include min(1200px){
-            margin:60px 0px 0px 0px;
+            margin:0px;
             justify-content: baseline;
-            align-items:baseline;
+            align-items:flex-start;
         }
     }
     &__newsletter--h3{

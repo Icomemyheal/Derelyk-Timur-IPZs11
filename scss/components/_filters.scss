@@ -70,6 +70,10 @@
             padding:0px 22px 0px 22px;
         }
     }
+    &__btn:hover{
+        background:$accentColor;
+        color:#fff;
+    }
     &__btn.active{
         background:$accentColor;
         color:#fff;
