@@ -34,14 +34,18 @@ spanCheckbox.addEventListener('click', () => {
 });
 //Active page
 document.addEventListener('DOMContentLoaded', () => {
-    const currentPage = location.pathname.split('/').pop();
+    const currentPage = '.' + location.pathname;
+    console.log(currentPage);
     const navLinks = document.querySelectorAll('.header__nav--link');
 
 const navLink = navLinks.forEach((item) => {
-    let linkPage = item.getAttribute('href').split('/').pop();
+    let linkPage = item.getAttribute('href');
+    console.log(linkPage);
     item.classList.remove('active');
     if(currentPage == linkPage){
         item.parentElement.classList.add('active');
+    } else if(currentPage == './'){
+        navLinks[0].parentElement.classList.add('active');
     } else {
         item.parentElement.classList.remove('active');
     }
