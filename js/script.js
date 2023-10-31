@@ -3,6 +3,7 @@ const body = document.getElementsByTagName('body');
 //BurgerMenu
 const burgerBtn = document.querySelector('.js-header__btn--menu');
 const headerMenu = document.querySelector('.js-header__menu');
+console.log(burgerBtn);
 // Modals
 const btnOrderOpenModal = document.querySelector('.js-order-btn');
 const modal = document.querySelector('.js-modal');
@@ -34,17 +35,17 @@ spanCheckbox.addEventListener('click', () => {
 });
 //Active page
 document.addEventListener('DOMContentLoaded', () => {
-    const currentPage = '.' + location.pathname;
+    const currentPage = location.pathname;
     console.log(currentPage);
     const navLinks = document.querySelectorAll('.header__nav--link');
 
 const navLink = navLinks.forEach((item) => {
-    let linkPage = item.getAttribute('href');
+    let linkPage = '/Derelyk-Timur-IPZs11/' + item.getAttribute('href');
     console.log(linkPage);
     item.classList.remove('active');
     if(currentPage == linkPage){
         item.parentElement.classList.add('active');
-    } else if(currentPage == './'){
+    } else if(currentPage == '/Derelyk-Timur-IPZs11/' || currentPage == './'){
         navLinks[0].parentElement.classList.add('active');
     } else {
         item.parentElement.classList.remove('active');
