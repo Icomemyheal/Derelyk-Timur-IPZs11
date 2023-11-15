@@ -18,8 +18,11 @@ const itemFix = document.getElementById('fix');
 const modalFormInputs = document.querySelectorAll('.js-modal-input');
 const modalFormSvgs = document.querySelectorAll('.js-icon');
 //Marging Items
+window.addEventListener('resize', () => {
+    location.reload();
+});
+//Adaptive Load Fix
 document.addEventListener('DOMContentLoaded', () => {
-
     const teamItems = document.querySelectorAll('.team__cards--item');
     const featuresItems = document.querySelectorAll('.features__li--item');
     const specializationItems = document.querySelectorAll('.specialization__li--item');
