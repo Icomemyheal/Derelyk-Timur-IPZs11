@@ -49,6 +49,10 @@
             width:355px;
             height:334px;
         }
+        @include min(1920px){
+            width:450px;
+            height:364px;
+        }
     }
     &__overlay--text{
         color: #FFF;
@@ -106,6 +110,9 @@
         @include min(1600px){
             height:445px;
         }
+        @include min(1920px){
+            height:480px;
+        }
         img{
             width:300px;
             height:264px;
@@ -136,6 +143,10 @@
             @include min(1600px){
                 width:355px;
                 height:334px;
+            }
+            @include min(1920px){
+                width:450px;
+                height:364px;
             }
         }
     }

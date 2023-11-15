@@ -2466,6 +2466,12 @@ template {
     height: 334px;
   }
 }
+@media screen and (min-width: 1920px) {
+  .projects__overlay {
+    width: 450px;
+    height: 364px;
+  }
+}
 .projects__overlay--text {
   color: #FFF;
   font-size: 14px;
@@ -2544,6 +2550,11 @@ template {
     height: 445px;
   }
 }
+@media screen and (min-width: 1920px) {
+  .projects__li--item {
+    height: 480px;
+  }
+}
 .projects__li--item img {
   width: 300px;
   height: 264px;
@@ -2588,6 +2599,12 @@ template {
   .projects__li--item img {
     width: 355px;
     height: 334px;
+  }
+}
+@media screen and (min-width: 1920px) {
+  .projects__li--item img {
+    width: 450px;
+    height: 364px;
   }
 }
 .projects__img--container:hover .projects__overlay {
