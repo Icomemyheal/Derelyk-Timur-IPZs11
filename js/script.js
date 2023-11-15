@@ -95,7 +95,7 @@ const filteredBtn = filtersBtns.forEach((btn) => {
     btn.addEventListener(('click'), () => {
         filtersBtns.forEach(item => item.classList.remove('active'));
         btn.classList.add('active');
-        if(btn.classList.contains('active') && btn.dataset.type == 'design' && min1200px){
+        if(btn.classList.contains('active') && btn.dataset.type == 'design'){
             itemFix.style.setProperty('margin-left', '30px', 'important');
         } else {
             itemFix.style.setProperty('margin-left', '0px', 'important');
