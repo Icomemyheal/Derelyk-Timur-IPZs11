@@ -1,4 +1,5 @@
 .specialization{
+    // padding-top:94px;
     margin-top:94px;
     display: none;
     @include min(1200px){
@@ -17,6 +18,7 @@
         display: flex;
         justify-content: center;
         align-items:center;
+        flex-wrap: wrap;
         list-style: none;
     }
     &__li--item{
@@ -25,13 +27,21 @@
         @include min(1920px){
             margin-left:35px;
         }
-    }    
-    &__li--item:first-child{
-        margin-left:0px;
+    }
+    .no-left-margin{
+        margin-left:0px !important;
+    }
+    &__li--item:nth-child(odd){
+        @include min(768px){
+            margin-left:0px;
+        }
+        @include min(1200px){
+            margin-left:30px;
+        }
     }
     &__titleImg--container{
         position: absolute;
-        width:340px;
+        width:360px;
         height:70px;
         display: flex;
         justify-content: center;
@@ -39,9 +49,12 @@
         bottom:0;
         left:0;
         text-align: center;
-        background: rgba(47, 48, 58, 0.80);
+        background: rgba(47, 48, 58, 0.90);
         @include min(1440px){
             width:400px;
+        }
+        @include min(1600px){
+            width:370px;
         }
         @include min(1920px){
             width:510px;
@@ -59,10 +72,13 @@
     &__img--container{
         img{
             @include min(1200px){
-                width:340px;
+                width:360px;
             }
             @include min(1440px){
                 width:400px;
+            }
+            @include min(1600px){
+                width:370px;
             }
             @include min(1920px){
                 width:510px;

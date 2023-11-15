@@ -1,14 +1,15 @@
 .team{
-    margin-top:60px;
+    // padding-top:60px;
     background:#F5F4FA;
+    margin-top:60px;
     @include min(1200px){
+        // padding-top:94px;
         margin-top:94px;
     }
     &__title{
         text-align: center;
         padding-top:60px;
         color:$black;
-        font-family:'Roboto', sans-serif;
         font-size:28px;
         font-weight:700;
         @include min(1200px){
@@ -43,38 +44,48 @@
         background: #FFF;
         box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.20), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
         display: flex;
-        width:100%;
+        width:280px;
         margin-top:30px;
-        height: 425px;
+        height:100%;
         flex-direction: column;
         @include min(425px){
             width:380px;
-            height:525px;
+        }
+        @include min(480px){
+            width:450px;
         }
         @include min(576px){
-            width:450px;
-            height:605px;
+            width:510px;
         }
         @include min(768px){
             width:334px;
-            height:496px;
             margin-left:30px;
         }
         @include min(992px){
             width:404px;
-            height:586px;
         }
         @include min(1200px){
-            width:247px;
-            height:408px;
+            width:262px;
         }
         @include min(1440px){
             width:295px;
-            height:448px;
+        }
+        @include min(1600px){
+            width:270px;
         }
         @include min(1920px){
             width:380px;
-            height:540px;
+        }
+    }
+    .no-left-margin{
+        margin-left:0px !important;
+    }
+    &__cards--item:nth-child(odd){
+        @include min(768px){
+            margin-left:0px;
+        }
+        @include min(1200px){
+            margin-left:30px;
         }
     }
     &__cards--item:last-child{
@@ -83,41 +94,36 @@
             margin-bottom:0px;
         }
     }
-    &__cards--item:first-child, &__cards--item:nth-child(3){
-        @include min(768px){
-            margin-left:0px;
-        }
-        @include min(1200px){
-            margin-left:30px;
-        }
-    }
-    .ml-n:first-child{
-        @include min(1200px){
-            margin-left:0px;
-        }
-    }
     &__img{
         width:100%;
+        height:100%;
+    }
+    &__card--content{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: 30px auto 24px auto;
+        max-width: 280px;
+        align-items:center;
     }
     &__card--name{
-        font-family:'Roboto', sans-serif;
         color:$black;
         letter-spacing: 0.48px;
         font-size: 16px;
         font-style: normal;
-        margin-top:30px;
         margin-bottom:10px;
+        max-width: inherit;
         font-weight: 500;
         @include min(576px){
             font-size:18px;
         }
     }
     &__card--position{
-        font-family:'Roboto', sans-serif;
         color:$grey;
         letter-spacing: 0.48px;
         font-size: 16px;
         font-style: normal;
+        max-width: inherit;
         font-weight:400;
         @include min(576px){
             font-size:18px;

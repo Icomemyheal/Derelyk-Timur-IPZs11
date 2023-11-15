@@ -1,12 +1,13 @@
 .clients{
+    // padding-top:60px;
     margin-top:60px;
     @include min(1200px){
+        // padding-top:94px;
         margin-top:94px;
     }
     &__title{
         color: $black;
         text-align: center;
-        font-family: 'Roboto', sans-serif;
         font-size: 28px;
         font-weight: 700;
         letter-spacing: 0.84px;
@@ -42,20 +43,23 @@
         border: 1px solid $grey;
         cursor: pointer;
         width: 120px;
-        margin-right:30px;
+        margin-left:30px;
         height: 92px;
         transition: all .3s ease-in;
         @include min(375px){
             width:140px;
         }
+        @include min(480px){
+            width:195px;
+        }
         @include min(576px){
             width:210px;
         }
         @include min(768px){
-            width:196px;
+            width:212px;
         }
         @include min(992px){
-            width:226px;
+            width:250px;
         }
         @include min(1200px){
             width:165px;
@@ -74,22 +78,31 @@
             transition: all .3s ease-in;
         }
     }
-    &__li--item:nth-child(even){
-        margin-right:0px;
+    .no-left-margin{
+        margin-left:0px !important;
+    }
+    &__li--item:nth-child(odd){
+        margin-left:0px;
         @include min(768px){
-            margin-right:30px;
+            margin-left:30px;
         }
     }
-    &__li--item:nth-child(3),&__li--item:nth-child(6){
-        @include min(768px){
-            margin-right:0px;
-        }
-    }
-    &__li--item:nth-child(3){
-        @include min(1200px){
-            margin-right:30px;
-        }
-    }
+    // &__li--item:nth-child(even){
+    //     margin-right:0px;
+    //     @include min(768px){
+    //         margin-right:30px;
+    //     }
+    // }
+    // &__li--item:nth-child(3),&__li--item:nth-child(6){
+    //     @include min(768px){
+    //         margin-right:0px;
+    //     }
+    // }
+    // &__li--item:nth-child(3){
+    //     @include min(1200px){
+    //         margin-right:30px;
+    //     }
+    // }
     &__li--item:hover{
         border:1px solid $accentColor;
         svg{

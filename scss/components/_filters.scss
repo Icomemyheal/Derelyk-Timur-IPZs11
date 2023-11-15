@@ -50,7 +50,6 @@
         padding:0px 12px 0px 12px;
         color:$black;
         cursor: pointer;
-        font-family:'Roboto', sans-serif;
         text-align: center;
         font-weight:500;
         font-size:16px;
@@ -62,6 +61,9 @@
         @include min(425px){
             padding:0px 22px 0px 22px;
         }
+        // @include min(480px){
+        //     padding:0px 25px 0px 25px;
+        // }
         @include min(576px){
             padding:0px 45px 0px 45px;
             font-size:18px;

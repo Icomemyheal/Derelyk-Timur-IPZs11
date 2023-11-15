@@ -1,11 +1,13 @@
 .footer{
     display: flex;
     margin-top:60px;
+    // padding-top:60px;
     background: #2F303A;
     @include min(1200px){
         justify-content: center;
         align-items:center;
         margin-top:94px;
+        // padding-top:94px;
     }
     &__logo span{
         color:$accentColor;
@@ -17,6 +19,7 @@
         font-family: 'Raleway', sans-serif;
         color:#FFF;
         font-weight:700;
+        font-size:24px;
         font-style: normal;
         text-align: center;
         letter-spacing: 0.72px;
@@ -43,10 +46,17 @@
             margin:0 auto;
             padding-bottom:60px;
         }
+        @include min(1600px){
+            justify-content: space-between;
+        }
+        @include min(1920px){
+            justify-content: space-around;
+        }
     }
     &__wrapper{
         @include min(768px){
             display: flex;
+            align-items:baseline;
             gap:155px;
         }
         @include min(992px){
@@ -58,19 +68,25 @@
         @include min(1440px){
             gap:120px;
         }
-        @include min(1560px){
-            gap:160px;
+        @include min(1600px){
+            gap:70px;
         }
         @include min(1920px){
             gap:280px;
         }
     }
     &__info{
+        display: flex;
+        flex-direction: column;
+        justify-content:center;
+        align-items:center;
         @include min(768px){
-            margin-left:76px;
+            margin-left:60px;
         }
         @include min(1200px){
             margin-left:0px;
+            justify-content: baseline;
+            align-items:baseline;
         }
     }
     &__address{
@@ -84,7 +100,6 @@
     &__address--item{
         color: #FFF;
         text-align: center;
-        font-family: 'Roboto', sans-serif;
         font-size: 14px;
         margin-top:28px;
         font-style: normal;
@@ -118,7 +133,6 @@
     &__socials--h3{
         text-align: center;
         color:#FFF;
-        font-family: 'Roboto', sans-serif;
         text-transform: uppercase;
         letter-spacing: 0.42px;
         font-weight:700;
@@ -191,7 +205,6 @@
     }
     &__newsletter--h3{
         color:#FFF;
-        font-family: 'Roboto', sans-serif;
         font-size:14px;
         font-weight:700;
         text-transform: uppercase;
@@ -220,7 +233,6 @@
         box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
         border: 1px solid rgba(255, 255, 255, 0.30);
         color:$grey;
-        font-family: 'Roboto', sans-serif;
         font-size:16px;
         padding-left:15px;
         line-height:20px;
@@ -267,7 +279,6 @@
     }
     &__newsletter--btn span{
         color:#FFF;
-        font-family: 'Roboto', sans-serif;
         font-size:16px;
         text-align: center;
         font-weight:700;

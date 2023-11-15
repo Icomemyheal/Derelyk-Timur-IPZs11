@@ -41,8 +41,15 @@
         font-size:24px;
         font-weight:700;
         letter-spacing:0.72px;
+        @include min(768px){
+            margin-right:88px;
+        }
+        @include min(1200px){
+            margin-right:93px;
+        }
         @include min(1920px){
             font-size:26px;
+            margin-right:0px;
         }
     }
     &__logo span{
@@ -118,6 +125,12 @@
         transition: transform .3s ease-in;
         height:100vh;
         width:100vw;
+        @include min(480px){
+            right:-30px;
+        }
+        @include min(576px){
+            right:-15px;
+        }
         @include min(768px){
             height:0px;
             transform: translateX(0%);
@@ -137,9 +150,10 @@
         @include min(768px){
           padding-left:0px;
           flex-direction: row;
-          justify-content: space-around;
           align-items:center;
-          height:auto;  
+        }
+        @include min(1920px){
+            justify-content: space-around;
         }
     }
     &__nav--menu{
@@ -171,11 +185,12 @@
             position: absolute;
             bottom: -33px;
             margin-bottom:0px;
+            border-radius:2px;
             left:0;
             right:0;
             width:100%;
             z-index:2;
-            height: 2px;
+            height: 4px;
             background-color: $accentColor;
             opacity: 0;
             transition: opacity 0.3s;
@@ -196,15 +211,11 @@
         margin-top:48px;
         @include min(768px){
             margin-top:0px;
-            margin-left:20px;
-        }
-        @include min(1200px){
-            margin-left:40px;
+            margin-left:0px;
         }
     }
     &__nav--link{
         text-decoration: none;
-        font-family: 'Roboto', sans-serif;
         font-weight:500;
         letter-spacing: 0.8px;
         color:$black;
@@ -232,22 +243,23 @@
         margin-top:306px;
         @include min(768px){
             flex-direction:column-reverse;
+            margin-left:72px;
             margin-top:0px;
         }
         @include min(1440px){
             flex-direction: row;
             align-items:center;
+            margin-left:193px;
         }
     }
     &__menu--tel{
-        font-family: 'Roboto', sans-serif;
         font-weight:500;
         text-decoration:none;
         color:$black;
         letter-spacing: 0.68px;
         font-size: 28px;    
-        @include min(576px){
-            font-size:32px;
+        @include min(480px){
+            font-size:34px;
         }
         @include min(768px){
             font-size:12px;
@@ -321,13 +333,12 @@
         }
     }
     &__menu--email{
-        font-family: 'Roboto', sans-serif;
         font-weight:500;
         text-decoration:none;
         color:$grey;
         letter-spacing: 0.48px;
         font-size: 22px;  
-        @include min(576px){
+        @include min(480px){
             font-size:24px;
         }
         @include min(768px){
@@ -368,6 +379,9 @@
         width:1px;
         height:20px;
         background: rgba(57, 57, 57, 0.2);
+        @include min(480px){
+            left:86px;
+        }
         @include min(576px){
             left:94px;
         } 
@@ -380,6 +394,9 @@
         width:1px;
         height:20px;
         background: rgba(57, 57, 57, 0.2);
+        @include min(480px){
+            left:152px;
+        }
         @include min(576px){
             left:167px;
         } 
@@ -392,6 +409,9 @@
         width:1px;
         height:20px;
         background: rgba(39, 39, 39, 0.550);
+        @include min(480px){
+            left:241px;
+        }
         @include min(576px){
             left:265px;
         } 
@@ -399,9 +419,11 @@
     &__socials--link{
         color:$accentColor;
         text-decoration: none;
-        font-family: 'Roboto', sans-serif;
         font-weight:500;
         font-size: 16px;
+        @include min(480px){
+            font-size:18px;
+        }
         @include min(576px){
             font-size:20px;
         }  
@@ -478,7 +500,6 @@
         border-radius:4px;
         margin-bottom:15px;
         color:$grey;
-        font-family: 'Roboto', sans-serif;
         font-size:14px;
         padding-left:30px;
         letter-spacing:0.14px;
@@ -511,7 +532,6 @@
         border: 1px solid rgba(33, 33, 33, 0.20);
         resize: none;
         color:$grey;
-        font-family: 'Roboto', sans-serif;
         font-size:14px;
         letter-spacing:0.14px;
         padding-left:10px;
@@ -531,7 +551,6 @@
         width:fit-content;
         margin-bottom:12px;
         text-align: center;
-        font-family: 'Roboto', sans-serif;
         font-size:20px;
         color:$black;
         font-weight:700;
@@ -546,7 +565,6 @@
     }
     &__form--span{
         font-size:12px;
-        font-family:'Roboto', sans-serif;
         color:$grey;
         font-weight:500;
         margin-bottom:4px;
@@ -556,7 +574,6 @@
         }
     }
     &__span--checkbox{
-        font-family: 'Roboto', sans-serif;
         color:$grey;
         font-size: 12px;
         font-weight: 400;
@@ -581,7 +598,6 @@
         height: 35px;
         background:$accentColor;
         color:#FFF;
-        font-family: 'Roboto', sans-serif;
         font-weight:700;
         font-size:16px;
         border:none;
