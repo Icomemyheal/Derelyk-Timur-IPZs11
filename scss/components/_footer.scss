@@ -36,7 +36,7 @@
         padding-top:60px;
         @include min(768px){
             justify-content: baseline;
-            align-items:baseline;
+            align-items:center;
             padding-bottom:0px;
         }
         @include min(1200px){
@@ -80,9 +80,9 @@
         flex-direction: column;
         justify-content:center;
         align-items:center;
-        @include min(768px){
-            margin-left:60px;
-        }
+        // @include min(768px){
+        //     margin-left:60px;
+        // }
         @include min(1200px){
             margin-left:0px;
             justify-content: baseline;
@@ -129,7 +129,7 @@
         }
     }
     &__address--link.grey__link{
-        color:$grey;
+        color: rgba(255, 255, 255, 0.60);
         margin-top:12px;
     }
     &__socials--container{
@@ -301,7 +301,7 @@
         font-weight:700;
         letter-spacing: 0.96px;
         line-height:30px;
-        padding-right:10px;
+        margin-right:12px;
         @include min(576px){
            font-size:18px;
         }

@@ -95,10 +95,6 @@
         svg{
             width:70px;
             height:70px;
-            @include min(576px){
-                width:80px;
-                height:80px;
-            }
         }
     }
     &__content{

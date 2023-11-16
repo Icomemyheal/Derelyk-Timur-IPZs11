@@ -402,7 +402,7 @@ template {
     left: -30px;
     height: 1px;
     width: 100vw;
-    background: #CECECE;
+    background: #ECECEC;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -411,9 +411,15 @@ template {
     left: -30px;
   }
 }
+@media screen and (min-width: 1600px) {
+  .header__top::after {
+    left: -215px;
+  }
+}
 @media screen and (min-width: 1920px) {
   .header__top::after {
     bottom: -2px;
+    left: -65px;
   }
 }
 .header__logo--link {
@@ -644,7 +650,7 @@ template {
   transition: color 0.3s ease-out;
   font-size: 36px;
 }
-@media screen and (min-width: 576px) {
+@media screen and (min-width: 480px) {
   .header__nav--link {
     font-size: 40px;
   }
@@ -996,6 +1002,10 @@ template {
   margin-bottom: 0px;
   outline: none;
 }
+.header__modal--form input[type=number]::-webkit-inner-spin-button, .header__modal--form input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
 .header__textarea--commentary {
   width: 240px;
   height: 120px;
@@ -1274,7 +1284,7 @@ template {
 @media screen and (min-width: 425px) {
   .hero__h1--title {
     font-size: 26px;
-    font-weight: 900;
+    line-height: 42px;
   }
 }
 @media screen and (min-width: 576px) {
@@ -1299,7 +1309,7 @@ template {
   width: -moz-fit-content;
   width: fit-content;
   height: 45px;
-  padding: 0px 15px 0px 15px;
+  padding: 10px 24px 10px 24px;
   border-radius: 4px;
   margin-top: 30px;
   cursor: pointer;
@@ -1326,7 +1336,7 @@ template {
   letter-spacing: 0.96px;
   font-weight: 500;
 }
-@media screen and (min-width: 576px) {
+@media screen and (min-width: 480px) {
   .hero__btn span {
     font-size: 16px;
   }
@@ -1458,12 +1468,6 @@ template {
   width: 70px;
   height: 70px;
 }
-@media screen and (min-width: 576px) {
-  .features__svg--container svg {
-    width: 80px;
-    height: 80px;
-  }
-}
 .features__content {
   display: flex;
   flex-direction: column;
@@ -1549,16 +1553,7 @@ template {
   justify-content: center;
   align-items: center;
   text-align: center;
-}
-@media screen and (min-width: 768px) {
-  .team__cards--container {
-    padding-bottom: 40px;
-  }
-}
-@media screen and (min-width: 992px) {
-  .team__cards--container {
-    padding-bottom: 60px;
-  }
+  padding-bottom: 60px;
 }
 .team__cards--list {
   display: flex;
@@ -1642,14 +1637,6 @@ template {
     margin-left: 30px;
   }
 }
-.team__cards--item:last-child {
-  margin-bottom: 60px;
-}
-@media screen and (min-width: 768px) {
-  .team__cards--item:last-child {
-    margin-bottom: 0px;
-  }
-}
 .team__img {
   width: 100%;
   height: 100%;
@@ -1671,11 +1658,6 @@ template {
   max-width: inherit;
   font-weight: 500;
 }
-@media screen and (min-width: 576px) {
-  .team__card--name {
-    font-size: 18px;
-  }
-}
 .team__card--position {
   color: #757575;
   letter-spacing: 0.48px;
@@ -1683,11 +1665,6 @@ template {
   font-style: normal;
   max-width: inherit;
   font-weight: 400;
-}
-@media screen and (min-width: 576px) {
-  .team__card--position {
-    font-size: 18px;
-  }
 }
 .team__circle {
   position: absolute;
@@ -1731,18 +1708,6 @@ template {
   height: 20px;
   fill: #afb1b8;
   transition: all 0.3s ease-in;
-}
-@media screen and (min-width: 576px) {
-  .team__card--socials svg {
-    width: 24px;
-    height: 24px;
-  }
-}
-@media screen and (min-width: 1200px) {
-  .team__card--socials svg {
-    width: 20px;
-    height: 20px;
-  }
 }
 
 .specialization {
@@ -2009,7 +1974,7 @@ template {
 @media screen and (min-width: 768px) {
   .footer__inner {
     justify-content: baseline;
-    align-items: baseline;
+    align-items: center;
     padding-bottom: 0px;
   }
 }
@@ -2070,11 +2035,6 @@ template {
   justify-content: center;
   align-items: center;
 }
-@media screen and (min-width: 768px) {
-  .footer__info {
-    margin-left: 60px;
-  }
-}
 @media screen and (min-width: 1200px) {
   .footer__info {
     margin-left: 0px;
@@ -2130,7 +2090,7 @@ template {
   }
 }
 .footer__address--link.grey__link {
-  color: #757575;
+  color: rgba(255, 255, 255, 0.6);
   margin-top: 12px;
 }
 .footer__socials--container {
@@ -2327,7 +2287,7 @@ template {
   font-weight: 700;
   letter-spacing: 0.96px;
   line-height: 30px;
-  padding-right: 10px;
+  margin-right: 12px;
 }
 @media screen and (min-width: 576px) {
   .footer__newsletter--btn span {

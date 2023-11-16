@@ -29,7 +29,8 @@
         text-transform: uppercase;
         @include min(425px){
             font-size:26px;
-            font-weight:900;
+            line-height:42px;
+
         }
         @include min(576px){
             width:420px;
@@ -47,7 +48,7 @@
     &__btn{
         width:fit-content;
         height: 45px;
-        padding:0px 15px 0px 15px;
+        padding:10px 24px 10px 24px;
         border-radius:4px;
         margin-top:30px;
         cursor: pointer;
@@ -69,7 +70,7 @@
         font-size: 14px;
         letter-spacing: 0.96px;
         font-weight:500;
-        @include min(576px){
+        @include min(480px){
             font-size: 16px;
         }
         @include min(1920px){

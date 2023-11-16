@@ -13,7 +13,8 @@ const modalOverlay = document.querySelector('.js-modal-overlay');
 //Filters
 const filtersBtns = document.querySelectorAll('.filters__btn');
 const projectItems = document.querySelectorAll('.js-projects-items');
-const itemFix = document.getElementById('fix');
+const itemFixDesign = document.getElementById('fix-design');
+const itemFixApps = document.getElementById('fix-apps');
 //Changing Modal Svg
 const modalFormInputs = document.querySelectorAll('.js-modal-input');
 const modalFormSvgs = document.querySelectorAll('.js-icon');
@@ -53,6 +54,9 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
     for(let i = 0; i < projectsItems.length; i++){
+        if(i % 2 === 0 && min768px && !min1200px){
+            projectsItems[i].classList.add('no-left-margin');
+        }
         if(i % 3 === 0 && min1200px){
             projectsItems[i].classList.add('no-left-margin');
         }
@@ -99,9 +103,14 @@ const filteredBtn = filtersBtns.forEach((btn) => {
         filtersBtns.forEach(item => item.classList.remove('active'));
         btn.classList.add('active');
         if(btn.classList.contains('active') && btn.dataset.type == 'design'){
-            itemFix.style.setProperty('margin-left', '30px', 'important');
+            itemFixDesign.style.setProperty('margin-left', '30px', 'important');
         } else {
-            itemFix.style.setProperty('margin-left', '0px', 'important');
+            itemFixDesign.style.setProperty('margin-left', '0px', 'important');
+        }
+        if(btn.classList.contains('active') && btn.dataset.type == 'apps'){
+            itemFixApps.style.setProperty('margin-left', '30px', 'important');
+        } else {
+            itemFixApps.style.setProperty('margin-left', '0px', 'important');
         }
         if(btn.classList.contains('active')){
             projectItems.forEach((item) => {
