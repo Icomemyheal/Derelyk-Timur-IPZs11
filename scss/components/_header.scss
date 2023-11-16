@@ -11,29 +11,30 @@
         align-items:center;
         justify-content:space-between;
         padding:16px 0px 16px 0px;
-        @include min(1440px){
-            padding:25px 0px 25px 0px;
+        @include min(1200px){
+            padding:25px 0px 24px 0px;
         }
     }
     &__top::after{
         @include min(768px){
             content:"";
             position: absolute;
-            bottom:-5px;
-            left:-65px;
+            bottom:-6px;
+            left:-30px;
             height:1px;
             width:100vw;
-            background: #ECECEC;
+            background: #CECECE;
         }
-        @include min(1440px){
-            bottom:-1px;
+        @include min(1200px){
+            bottom:-4px;
+            left:-30px;
+        }
+        @include min(1920px){
+            bottom:-2px;
         }
     }
     &__logo--link{
         text-decoration:none;
-        @include min(992px){
-            margin-left:80px;
-        }
     }
     &__logo{
         font-family:'Raleway', sans-serif;
@@ -152,6 +153,12 @@
           flex-direction: row;
           align-items:center;
         }
+        @include min(992px){
+            justify-content: space-between;
+        }
+        @include min(1600px){
+            justify-content: initial;
+        }
         @include min(1920px){
             justify-content: space-around;
         }
@@ -246,10 +253,13 @@
             margin-left:72px;
             margin-top:0px;
         }
-        @include min(1440px){
-            flex-direction: row;
+        @include min(1200px){
+            flex-direction: row-reverse;
             align-items:center;
             margin-left:193px;
+        }
+        @include min(1600px){
+            margin-left:280px;
         }
     }
     &__menu--tel{
@@ -278,6 +288,9 @@
         @include min(768px){
             display: flex;
             align-items:center;
+        }
+        @include min(1200px){
+            margin-left:40px;
         }
         svg{
             display: none;
@@ -318,7 +331,7 @@
         @include min(768px){
             margin-top:10px;
         }
-        @include min(1440px){
+        @include min(1200px){
             margin-top:0px;
         }
     }
@@ -327,9 +340,9 @@
         @include min(768px){
             margin-top:0px;
         }
-        @include min(1440px){
+        @include min(1200px){
             margin-top:0px;
-            margin-left:60px;
+            margin-left:0px;
         }
     }
     &__menu--email{

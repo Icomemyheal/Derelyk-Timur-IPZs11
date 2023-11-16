@@ -101,7 +101,7 @@
         color: #FFF;
         text-align: center;
         font-size: 14px;
-        margin-top:28px;
+        margin-top:12px;
         font-style: normal;
         font-weight: 400;
         @include min(1200px){
@@ -111,7 +111,24 @@
             font-size:16px;
         }
     }
-    &__address--item.grey__item{
+    &__address--item:first-child{
+        margin-top:28px;
+    }
+    &__address--link{
+        text-decoration: none;
+        color: #FFF;
+        text-align: center;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        @include min(1200px){
+            text-align:left;
+        }
+        @include min(576px){
+            font-size:16px;
+        }
+    }
+    &__address--link.grey__link{
         color:$grey;
         margin-top:12px;
     }

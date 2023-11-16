@@ -47,11 +47,6 @@
         max-width:1410px;
     }
 }
-@include min(1560px) {
-    .container {
-        max-width: 1530px;
-    }
-}
 @include min(1600px){
     .container {
         max-width:1200px;
