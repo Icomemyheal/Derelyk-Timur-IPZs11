@@ -2315,7 +2315,7 @@ template {
 }
 .projects__overlay {
   width: 100%;
-  height: 264px;
+  height: 294px;
   background: #2196F3;
   position: absolute;
   display: flex;
@@ -2331,49 +2331,36 @@ template {
 @media screen and (min-width: 425px) {
   .projects__overlay {
     width: 400px;
-    height: 294px;
   }
 }
 @media screen and (min-width: 480px) {
   .projects__overlay {
     width: 450px;
-    height: 294px;
   }
 }
 @media screen and (min-width: 576px) {
   .projects__overlay {
     width: 500px;
-    height: 356px;
   }
 }
 @media screen and (min-width: 768px) {
   .projects__overlay {
-    width: 334px;
-    height: 294px;
-  }
-}
-@media screen and (min-width: 992px) {
-  .projects__overlay {
-    width: 370px;
-    height: 400px;
+    width: 320px;
   }
 }
 @media screen and (min-width: 1200px) {
   .projects__overlay {
     width: 334px;
-    height: 294px;
   }
 }
 @media screen and (min-width: 1600px) {
   .projects__overlay {
     width: 355px;
-    height: 334px;
   }
 }
 @media screen and (min-width: 1920px) {
   .projects__overlay {
     width: 450px;
-    height: 364px;
   }
 }
 .projects__overlay--text {
@@ -2445,17 +2432,7 @@ template {
 }
 @media screen and (min-width: 1200px) {
   .projects__li--item {
-    height: 405px;
-  }
-}
-@media screen and (min-width: 1600px) {
-  .projects__li--item {
-    height: 445px;
-  }
-}
-@media screen and (min-width: 1920px) {
-  .projects__li--item {
-    height: 480px;
+    height: 404px;
   }
 }
 .projects__li--item img {

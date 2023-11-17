@@ -9,7 +9,7 @@
     }
     &__overlay{
         width:100%;
-        height:264px;
+        height:294px;
         background:$accentColor;
         position: absolute;
         display: flex;
@@ -23,35 +23,26 @@
         transition: all .3s ease-in;
         @include min(425px){
             width:400px;
-            height:294px;
         }
         @include min(480px){
             width:450px;
-            height:294px;
         }
         @include min(576px){
             width:500px;
-            height:356px;
         }
         @include min(768px){
-            width: 334px;
-            height: 294px;
+            width: 320px;
         }
         @include min(992px){
-            width:370px;
-            height:400px;
         }
         @include min(1200px){
             width:334px;
-            height: 294px;
         }
         @include min(1600px){
             width:355px;
-            height:334px;
         }
         @include min(1920px){
             width:450px;
-            height:364px;
         }
     }
     &__overlay--text{
@@ -104,13 +95,7 @@
             height:515px;
         }
         @include min(1200px){
-            height:405px;
-        }
-        @include min(1600px){
-            height:445px;
-        }
-        @include min(1920px){
-            height:480px;
+            height:404px;
         }
         img{
             width:300px;
