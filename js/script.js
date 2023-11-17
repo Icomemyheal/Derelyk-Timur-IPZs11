@@ -18,7 +18,7 @@ const itemFixApps = document.getElementById('fix-apps');
 //Changing Modal Svg
 const modalFormInputs = document.querySelectorAll('.js-modal-input');
 const modalFormSvgs = document.querySelectorAll('.js-icon');
-//Marging Items
+//Marging Elements
 window.addEventListener('resize', () => {
     location.reload();
 });
@@ -102,15 +102,20 @@ const filteredBtn = filtersBtns.forEach((btn) => {
     btn.addEventListener(('click'), () => {
         filtersBtns.forEach(item => item.classList.remove('active'));
         btn.classList.add('active');
-        if(btn.classList.contains('active') && btn.dataset.type == 'design'){
+        if(btn.classList.contains('active') && btn.dataset.type == 'design' && min768px){
             itemFixDesign.style.setProperty('margin-left', '30px', 'important');
         } else {
             itemFixDesign.style.setProperty('margin-left', '0px', 'important');
         }
-        if(btn.classList.contains('active') && btn.dataset.type == 'apps'){
+        if(btn.classList.contains('active') && btn.dataset.type == 'apps' && min768px){
             itemFixApps.style.setProperty('margin-left', '30px', 'important');
         } else {
             itemFixApps.style.setProperty('margin-left', '0px', 'important');
+        }
+        if(btn.classList.contains('active') && btn.dataset.type == 'apps' && min1200px){
+            itemFixApps.style.setProperty('margin-left', '30px', 'important');
+        } else if(btn.classList.contains('active') && btn.dataset.type !== 'apps' && min1200px){
+            itemFixApps.style.setProperty('margin-left', '30px', 'important');
         }
         if(btn.classList.contains('active')){
             projectItems.forEach((item) => {

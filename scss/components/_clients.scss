@@ -56,7 +56,7 @@
             width:210px;
         }
         @include min(768px){
-            width:212px;
+            width:216px;
         }
         @include min(992px){
             width:250px;
@@ -65,6 +65,9 @@
             width:165px;
         }
         @include min(1440px){
+            width:186px;
+        }
+        @include min(1600px){
             width:170px;
         }
         @include min(1920px){
@@ -87,22 +90,6 @@
             margin-left:30px;
         }
     }
-    // &__li--item:nth-child(even){
-    //     margin-right:0px;
-    //     @include min(768px){
-    //         margin-right:30px;
-    //     }
-    // }
-    // &__li--item:nth-child(3),&__li--item:nth-child(6){
-    //     @include min(768px){
-    //         margin-right:0px;
-    //     }
-    // }
-    // &__li--item:nth-child(3){
-    //     @include min(1200px){
-    //         margin-right:30px;
-    //     }
-    // }
     &__li--item:hover{
         border:1px solid $accentColor;
         svg{

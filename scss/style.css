@@ -1348,11 +1348,11 @@ template {
 }
 
 .features {
-  padding-top: 60px;
+  margin-top: 60px;
 }
 @media screen and (min-width: 1200px) {
   .features {
-    padding-top: 94px;
+    margin-top: 94px;
   }
 }
 .features__inner {
@@ -1404,7 +1404,7 @@ template {
 }
 @media screen and (min-width: 768px) {
   .features__li--item {
-    width: 334px;
+    width: 339px;
   }
 }
 @media screen and (min-width: 992px) {
@@ -1454,6 +1454,11 @@ template {
 @media screen and (min-width: 1200px) {
   .features__li--item:nth-child(odd) {
     margin-left: 30px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .features__li--item:nth-child(1), .features__li--item:nth-child(2) {
+    margin-top: 0px;
   }
 }
 .features__svg--container {
@@ -1595,7 +1600,7 @@ template {
 }
 @media screen and (min-width: 768px) {
   .team__cards--item {
-    width: 334px;
+    width: 339px;
     margin-left: 30px;
   }
 }
@@ -1764,7 +1769,7 @@ template {
   display: flex;
   justify-content: center;
   align-items: center;
-  bottom: 0;
+  bottom: 4px;
   left: 0;
   text-align: center;
   background: rgba(47, 48, 58, 0.9);
@@ -1883,7 +1888,7 @@ template {
 }
 @media screen and (min-width: 768px) {
   .clients__li--item {
-    width: 212px;
+    width: 216px;
   }
 }
 @media screen and (min-width: 992px) {
@@ -1897,6 +1902,11 @@ template {
   }
 }
 @media screen and (min-width: 1440px) {
+  .clients__li--item {
+    width: 186px;
+  }
+}
+@media screen and (min-width: 1600px) {
   .clients__li--item {
     width: 170px;
   }
