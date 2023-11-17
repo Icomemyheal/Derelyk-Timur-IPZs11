@@ -177,6 +177,7 @@
         @include min(768px){
             display: flex;
             flex-direction: row;
+            gap: 50px;
         }
     }
     &__nav--item{
@@ -184,7 +185,6 @@
         position: relative;
         @include min(768px){
             margin-top:0px;
-            margin-left:50px;
         }
     }
     &__nav--item.active a{

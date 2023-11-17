@@ -163,14 +163,18 @@
         justify-content: center;
         align-items:center;
         margin-top:30px;
+        gap: 10px;
         list-style: none;
     }
     &__socials--item{
-        position: relative;
         display: flex;
         align-items:center;
         justify-content:center;
-        margin-left:40px;
+        width:44px;
+        height:44px;
+        background:rgba(255, 255, 255, 0.10);
+        border-radius:50%;
+        transition: all .3s ease-in;
         svg{
             position: relative;
             z-index:2;
@@ -178,10 +182,6 @@
             height:20px;
             fill:#FFF;
             transition: all .3s ease-in;
-            @include min(576px){
-                width:24px;
-                height:24px;
-            }
         }
     }
     &__socials--links{
@@ -190,20 +190,7 @@
         align-items:center;
     }
     &__socials--item:hover{
-        .footer__circle{
-            background:$accentColor;
-        }
-    }
-    &__socials--item:first-child{
-        margin-left:0;
-    }
-    &__circle{
-        position: absolute;
-        width:44px;
-        height:44px;
-        background:rgba(255, 255, 255, 0.10);
-        border-radius:50%;
-        transition: all .3s ease-in;
+        background:$accentColor;
     }
     &__newsletter{
         display: flex;

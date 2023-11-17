@@ -11,6 +11,7 @@
         display: flex;
         flex-direction: column;
         align-items:center;
+        gap: 30px;
         list-style:none;
         @include min(768px){
             flex-direction: row;
@@ -24,7 +25,6 @@
         flex-direction: column;
         justify-content: center;
         align-items:center;
-        margin-top:30px;
         width:300px;
         height:100%;
         @include min(375px){
@@ -59,37 +59,11 @@
         }
         @include min(768px){
             flex-wrap: wrap;
-            margin-left:30px;
         }
         @include min(1200px){
             margin-top:0px;
         }
     }
-    .no-left-margin{
-        margin-left:0px !important;
-    }
-    &__li--item:nth-child(odd){
-        @include min(768px){
-            margin-left:0px;
-        }
-        @include min(1200px){
-            margin-left:30px;
-        }
-    }
-    &__li--item:nth-child(1),&__li--item:nth-child(2){
-        @include min(768px){
-            margin-top:0px;
-        }
-    }
-    // &__ul--list &__li--item:nth-child(2){
-    //     @include min(768px){
-    //         margin-top:0px;
-    //     }
-    // }
-    // &__inner > &__ul--list > &__li--item:first-child{
-    //     margin-top:0px;
-    //     margin-left:0px;
-    // }
     &__svg--container{
         width:100%;
         border-radius: 4px;

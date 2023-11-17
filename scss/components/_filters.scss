@@ -13,32 +13,13 @@
         list-style: none;
         flex-wrap: wrap;
         max-width:480px;
+        row-gap: 15px;
+        column-gap: 8px;
         @include min(576px){
             max-width:630px;
         }
         @include min(768px){
             flex-wrap: nowrap;
-        }
-    }
-    &__li--item{
-        margin-left:8px;
-    }
-    &__li--item:first-child{
-        margin-left:0;
-    }
-    .design__item{
-        margin-left:0;
-        margin-top:20px;
-        @include min(768px){
-            margin-left:8px;
-            margin-top:0px;
-        }
-    }
-    .marketing__item{
-        margin-top:20px;
-        @include min(768px){
-            margin-left:8px;
-            margin-top:0px;
         }
     }
     &__btn{

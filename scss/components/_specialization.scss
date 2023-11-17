@@ -19,25 +19,11 @@
         justify-content: center;
         align-items:center;
         flex-wrap: wrap;
+        gap: 30px;
         list-style: none;
     }
     &__li--item{
         position: relative;
-        margin-left:30px;
-        @include min(1920px){
-            margin-left:35px;
-        }
-    }
-    .no-left-margin{
-        margin-left:0px !important;
-    }
-    &__li--item:nth-child(odd){
-        @include min(768px){
-            margin-left:0px;
-        }
-        @include min(1200px){
-            margin-left:30px;
-        }
     }
     &__titleImg--container{
         position: absolute;
