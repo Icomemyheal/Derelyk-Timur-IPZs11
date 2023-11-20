@@ -1,19 +1,21 @@
 .team{
-    // padding-top:60px;
+    padding-top:60px;
+    padding-bottom:60px;
     background:#F5F4FA;
     margin-top:60px;
     @include min(1200px){
-        // padding-top:94px;
+        padding-top:94px;
+        padding-bottom:94px;
         margin-top:94px;
     }
     &__title{
         text-align: center;
-        padding-top:60px;
         color:$black;
         font-size:28px;
         font-weight:700;
         margin-bottom: 30px;
         @include min(1200px){
+            margin-bottom:50px;
             font-size:36px;
         }
     }
@@ -22,13 +24,6 @@
         justify-content: center;
         align-items:center;
         text-align: center;
-        padding-bottom:60px;
-        // @include min(768px){
-        //     padding-bottom:40px;
-        // }
-        // @include min(992px){
-        //     padding-bottom:60px;
-        // }
     }
     &__cards--list{
         display: flex;

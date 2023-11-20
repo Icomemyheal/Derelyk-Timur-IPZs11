@@ -13,6 +13,7 @@
         letter-spacing: 0.84px;
         margin-bottom: 30px;
         @include min(1200px){
+            margin-bottom:50px;
             font-size:36px;
         }
     }

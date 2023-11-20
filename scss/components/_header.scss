@@ -2,39 +2,18 @@
 .header{
     height:60px;
     background:#fff;
+    position: relative;
     @include min(768px){
         height:80px;
+        border-bottom:1px solid #ECECEC;
     }
     &__top{
         display: flex;
-        position: relative;
         align-items:center;
         justify-content:space-between;
         padding:16px 0px 16px 0px;
         @include min(1200px){
             padding:25px 0px 24px 0px;
-        }
-    }
-    &__top::after{
-        @include min(768px){
-            content:"";
-            position: absolute;
-            bottom:-6px;
-            left:-30px;
-            height:1px;
-            width:100vw;
-            background: #ECECEC;
-        }
-        @include min(1200px){
-            bottom:-4px;
-            left:-30px;
-        }
-        @include min(1600px){
-            left:-215px;
-        }
-        @include min(1920px){
-            bottom:-2px;
-            left:-65px;
         }
     }
     &__logo--link{
@@ -54,7 +33,6 @@
         }
         @include min(1920px){
             font-size:26px;
-            margin-right:0px;
         }
     }
     &__logo span{
@@ -123,19 +101,13 @@
     &__menu{
         position:absolute;
         top:0;
-        right:-15px;
+        right:0;
         z-index:1000;
         background:#fff;
         transform: translateX(-100%);
         transition: transform .3s ease-in;
         height:100vh;
         width:100vw;
-        @include min(480px){
-            right:-30px;
-        }
-        @include min(576px){
-            right:-15px;
-        }
         @include min(768px){
             height:0px;
             transform: translateX(0%);
@@ -151,9 +123,13 @@
     &__menu--container{
         display: flex;
         flex-direction: column;
+        justify-content: space-between;
+        height:100%;
+        padding-bottom:48px;
         padding-left:25px;
         @include min(768px){
           padding-left:0px;
+          padding-bottom:0px;
           flex-direction: row;
           align-items:center;
         }
@@ -251,19 +227,14 @@
         display: flex;
         flex-direction: column;
         list-style: none;
-        margin-top:306px;
         @include min(768px){
             flex-direction:column-reverse;
-            margin-left:72px;
+            margin-left:auto;
             margin-top:0px;
         }
         @include min(1200px){
             flex-direction: row-reverse;
             align-items:center;
-            margin-left:193px;
-        }
-        @include min(1600px){
-            margin-left:280px;
         }
     }
     &__menu--tel{
@@ -372,7 +343,7 @@
     // }
     &__menu--socials{
         display: flex;
-        margin-top:170px;
+        // margin-top:170px;
         @include min(768px){
             display: none;
         }
@@ -530,11 +501,17 @@
         }
 
     }
+    &__modal--form input + svg{
+        fill:black;
+    }
     &__modal--form input._error{
         box-shadow: 0 0 10px rgb(240, 99, 99);
     }
     &__modal--form input:focus{
         outline:1px solid $accentColor;
+    }
+    &__modal--form input:focus + svg{
+        fill:$accentColor;
     }
     &__modal--form input[type="checkbox"]{
         width:16px;
@@ -601,6 +578,7 @@
         font-size: 12px;
         font-weight: 400;
         margin-left:10px;
+        cursor: pointer;
         letter-spacing: 0.36px;
         @include min(576px){
             font-size:14px;

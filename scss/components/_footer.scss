@@ -35,19 +35,18 @@
         padding-bottom:60px;
         padding-top:60px;
         @include min(768px){
-            justify-content: baseline;
-            align-items:center;
+            justify-content: space-around;
+            flex-direction: row;
+            flex-wrap: wrap;
+            align-items:flex-start;
             padding-bottom:0px;
         }
         @include min(1200px){
             flex-direction: row;
-            justify-content: space-around;
-            align-items:flex-start;
+            justify-content: space-between;
+            align-items:baseline;
             margin:0 auto;
             padding-bottom:60px;
-        }
-        @include min(1600px){
-            justify-content: space-between;
         }
         @include min(1920px){
             justify-content: space-around;
@@ -201,7 +200,11 @@
         @include min(768px){
             margin:60px auto;
         }
+        @include min(992px){
+            width:100%;
+        }
         @include min(1200px){
+            width: auto;
             margin:0px;
             justify-content: baseline;
             align-items:flex-start;

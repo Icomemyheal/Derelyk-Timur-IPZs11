@@ -1,3 +1,4 @@
+const body = document.getElementsByTagName('body')[0];
 //BurgerMenu
 const burgerBtn = document.querySelector('.js-header__btn--menu');
 const headerMenu = document.querySelector('.js-header__menu');
@@ -14,16 +15,6 @@ const itemFixApps = document.getElementById('fix-apps');
 //Changing Modal Svg
 const modalFormInputs = document.querySelectorAll('.js-modal-input');
 const modalFormSvgs = document.querySelectorAll('.js-icon');
-
-modalFormInputs.forEach((input, index) => {
-    input.addEventListener('focus', () => {
-        modalFormSvgs[index].setAttribute('fill', '#188CE8');
-    });
-
-    input.addEventListener('blur', () => {
-        modalFormSvgs[index].setAttribute('fill', 'black');
-    });
-});
 //Checkbox State Change
 document.addEventListener('DOMContentLoaded', () => {
     const spanCheckbox = document.querySelector('.js-span-checkbox');
@@ -35,7 +26,6 @@ spanCheckbox?.addEventListener('click', () => {
 });
 
 const filteredBtn = filtersBtns.forEach((btn) => {
-    
     btn.addEventListener(('click'), () => {
         filtersBtns.forEach(e => {e.classList.remove('active');});
         btn.classList.add('active');
@@ -57,7 +47,7 @@ burgerBtn.addEventListener('click', (e) => {
     e.preventDefault();
     burgerBtn.classList.toggle('active');
     headerMenu.classList.toggle('open');
-    body[0].classList.toggle('fixing');
+    body.classList.toggle('fixing');
 });
 btnOrderOpenModal?.addEventListener('click', (e) => {
     e.preventDefault();
